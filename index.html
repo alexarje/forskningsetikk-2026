@@ -185,6 +185,9 @@
   .reveal section.title-photo .big { color: #363644; font-size: .95em; font-weight: 500; text-align: left; margin: 0; }
   .reveal section.title-photo .kicker { color: #4a5568; text-align: left; }
   .reveal section.title-photo .byline { color: #363644; font-size: .75em; text-align: left; margin: 0 0 .3em; }
+  .vroles { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; width: 92%; margin: .5em auto 0; text-align: left; }
+  .vroles .card { font-size: .9em; } .vroles .card p { margin: 0; color: var(--muted); }
+  .vroles .card.hl { background: #363644; border-color: #363644; color: #fff; } .vroles .card.hl h3 { color: #fff; } .vroles .card.hl p { color: #e2e8f0; }
 </style>
 </head>
 <body>
@@ -230,6 +233,19 @@
     <p class="chapnum" style="color:#fff">1</p>
     <h2 style="color:#fff">Veiledning er kvalitetskontroll</h2>
     <aside class="notes">Først rollen som veileder.</aside>
+  </section>
+  <section class="center-slide">
+    <p class="kicker">Veilederen</p>
+    <h2>Hva er en veileder?</h2>
+    <div class="vroles">
+      <div class="card purple fragment"><h3>Lærer</h3><p>fag, metode og håndverk</p></div>
+      <div class="card green fragment"><h3>Faglig veileder</h3><p>spørsmål, retning og argument</p></div>
+      <div class="card purple fragment"><h3>Mentor</h3><p>karriere, nettverk og trygghet</p></div>
+      <div class="card green fragment"><h3>Leder</h3><p>prosjekt, tid, penger og folk</p></div>
+      <div class="card purple fragment"><h3>Medforfatter</h3><p>skriver og står inne for det sammen</p></div>
+      <div class="card hl fragment"><h3>Kvalitetskontrollør</h3><p>leser, sjekker og godkjenner</p></div>
+    </div>
+    <aside class="notes">Hva er det egentlig å være veileder? Man er lærer, som lærer bort fag, metode og håndverk. (Klikk.) Man er faglig veileder, som hjelper med spørsmålet, retningen og argumentet. (Klikk.) Man er mentor, for karrieren, nettverket og tryggheten. (Klikk.) Ofte er man også leder for prosjektet stipendiaten er ansatt i, med ansvar for tid, penger og folk. (Klikk.) Og ofte medforfatter, som står inne for resultatet sammen med kandidaten. (Klikk.) I alle rollene er man også kvalitetskontrollør: man leser, sjekker og godkjenner. Det er den rollen KI endrer mest.</aside>
   </section>
   <section class="center-slide">
     <div class="layers" style="width:1700px">
@@ -307,6 +323,16 @@
     <h2>Skriv ned hva som ble gjort, og av hvem</h2>
     <pre class="code" style="white-space:pre-wrap;font-size:.62em;max-width:1700px;margin:0 auto"><span data-n="worklog"></span></pre>
     <aside class="notes">Det andre verktøyet er det enkleste av alle: en arbeidslogg i ren tekst i hver prosjektmappe. Dette er den siste oppføringen i mappen for dette innlegget, skrevet da lysbildene ble laget. Loggen sier hva som ble gjort, med hvilke verktøy og hvem som bestemte. Den er versjonert som alt annet, så den kan ikke skrives om i ettertid uten at det synes.</aside>
+  </section>
+  <section class="center-slide">
+    <p class="kicker">Mennesker og maskiner</p>
+    <h2>Hvert bidrag har en avsender</h2>
+    <div class="layers" style="width:1700px">
+      <img class="lay" src="images/fig-provenance-1.png" alt="">
+      <img class="lay fragment" src="images/fig-provenance-2.png" alt="">
+      <img class="lay fragment" src="images/fig-provenance-3.png" alt="En tidslinje der hvert steg i et prosjekt er en versjon med tidsstempel, enten fra et menneske med ORCID eller fra en maskin med modell og versjon">
+    </div>
+    <aside class="notes">Sett sammen blir det slik. Hvert steg i et prosjekt er en versjon med et tidspunkt. (Klikk.) Og hvert bidrag har en avsender: et menneske med ORCID, (klikk) eller en maskin med modell og versjon. I programvareutvikling har man arbeidet slik i mange år. For en stipendiat betyr det at veilederen, og senere komiteen, kan se hvem som gjorde hva og når, uten at noen må huske det i ettertid.</aside>
   </section>
   <section class="center-slide" data-depth="more">
     <p class="kicker">Tidsstempel og fingeravtrykk</p>
