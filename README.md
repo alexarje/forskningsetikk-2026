@@ -2,7 +2,7 @@
 
 Lysbildene til Alexander Refsum Jensenius' innlegg "Transparens er ikke så vanskelig, vi har alt vi trenger for fornuftig bruk av KI" på Forum for forskningsetikk ved Universitetet i Oslo.
 
-Se presentasjonen: https://pages.github.uio.no/alexanje/forskningsetikk-2026/
+Se presentasjonen: https://alexarje.github.io/forskningsetikk-2026/
 
 ## Arrangementet
 
