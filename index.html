@@ -185,9 +185,6 @@
   .reveal section.title-photo .big { color: #363644; font-size: .95em; font-weight: 500; text-align: left; margin: 0; }
   .reveal section.title-photo .kicker { color: #4a5568; text-align: left; }
   .reveal section.title-photo .byline { color: #363644; font-size: .75em; text-align: left; margin: 0 0 .3em; }
-  .vroles { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; width: 92%; margin: .5em auto 0; text-align: left; }
-  .vroles .card { font-size: .9em; } .vroles .card p { margin: 0; color: var(--muted); }
-  .vroles .card.hl { background: #363644; border-color: #363644; color: #fff; } .vroles .card.hl h3 { color: #fff; } .vroles .card.hl p { color: #e2e8f0; }
   .eco { display: flex; flex-wrap: wrap; gap: .35em; justify-content: center; margin: .3em auto .7em; font-size: .75em; }
   .eco span { background: #eefbe8; border: 2px solid #8fd67a; border-radius: 999px; padding: .2em .8em; font-weight: 700; }
   .fair { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5em; width: 94%; margin: 0 auto; text-align: left; }
@@ -195,6 +192,8 @@
   .fair b { display: block; font-size: 2.4em; line-height: 1; color: #5a4fcf; }
   .fair h3 { font-size: 1.05em; margin: .2em 0 .1em; } .fair p { margin: 0; color: var(--muted); }
   html.dark .eco span { background: #1f2e1c; } html.dark .fair b { color: #b8b3ff; }
+  .why { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6em; width: 88%; margin: .5em auto 0; text-align: left; }
+  .why .card { font-size: .85em; } .why .card p { margin: 0; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -221,7 +220,7 @@
       <p class="byline">Alexander Refsum Jensenius</p>
       <p class="kicker">Forum for forskningsetikk · Universitetet i Oslo · 12. november 2026</p>
     </div>
-    <aside class="notes">Budskapet mitt for forskerutdanningen er enkelt: når maskinene kan levere produktet, må vi lære bort og vurdere prosessen. Stipendiaten må kunne vise og forklare veien frem til resultatet, og verktøyene for å dokumentere den har vi allerede. Bildet er fra fjellet en dag med tåke: man finner frem fordi noen har satt opp stikker langs løypen. Det er det dokumentasjon gjør i forskningen.</aside>
+    <aside class="notes">Budskapet mitt er enkelt: når maskinene kan levere produktet, blir en åpen og FAIR forskningsprosess viktigere enn noen gang. Stipendiaten må kunne vise og forklare veien frem til resultatet, og verktøyene for å dokumentere den har vi allerede. Bildet er fra fjellet en dag med tåke: man finner frem fordi noen har satt opp stikker langs løypen. Det er det dokumentasjon gjør i forskningen.</aside>
   </section>
   <section class="center-slide">
     <div class="logos4">
@@ -234,25 +233,23 @@
   </section>
 </section>
 
-<!-- ===================== 1 VEILEDNING ER KVALITETSKONTROLL ===================== -->
+<!-- ===================== 1 HVORFOR ÅPEN FORSKNING NÅ ===================== -->
 <section>
   <section class="chapter" data-background-color="#5a4fcf">
     <p class="chapnum" style="color:#fff">1</p>
-    <h2 style="color:#fff">Veiledning er kvalitetskontroll</h2>
-    <aside class="notes">Først rollen som veileder.</aside>
+    <h2 style="color:#fff">Hvorfor åpen forskning nå?</h2>
+    <aside class="notes">Først: hvorfor åpen forskning er viktigere nå enn før.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Veilederen</p>
-    <h2>Hva er en veileder?</h2>
-    <div class="vroles">
-      <div class="card purple fragment"><h3>Lærer</h3><p>fag, metode og håndverk</p></div>
-      <div class="card green fragment"><h3>Faglig veileder</h3><p>spørsmål, retning og argument</p></div>
-      <div class="card purple fragment"><h3>Mentor</h3><p>karriere, nettverk og trygghet</p></div>
-      <div class="card green fragment"><h3>Leder</h3><p>prosjekt, tid, penger og folk</p></div>
-      <div class="card purple fragment"><h3>Medforfatter</h3><p>skriver og står inne for det sammen</p></div>
-      <div class="card hl fragment"><h3>Kvalitetskontrollør</h3><p>leser, sjekker og godkjenner</p></div>
+    <p class="kicker">Åpen forskning</p>
+    <h2>Hvorfor er åpenhet viktigere med KI?</h2>
+    <div class="why">
+      <div class="card purple fragment"><h3>Bevis</h3><p>Maskinene kan lage produktet. Bare prosessen viser hvem som gjorde hva.</p></div>
+      <div class="card green fragment"><h3>Tillit</h3><p>Når tekst kan genereres, flytter tilliten seg til det som kan etterprøves.</p></div>
+      <div class="card purple fragment"><h3>Etterprøvbarhet</h3><p>Modellene skifter. Uten versjoner og data kan ingen gjenta resultatet.</p></div>
+      <div class="card green fragment"><h3>Egne modeller</h3><p>Åpne og FAIR data er grunnlaget for modeller vi kan stole på.</p></div>
     </div>
-    <aside class="notes">Hva er det egentlig å være veileder? Man er lærer, som lærer bort fag, metode og håndverk. (Klikk.) Man er faglig veileder, som hjelper med spørsmålet, retningen og argumentet. (Klikk.) Man er mentor, for karrieren, nettverket og tryggheten. (Klikk.) Ofte er man også leder for prosjektet stipendiaten er ansatt i, med ansvar for tid, penger og folk. (Klikk.) Og ofte medforfatter, som står inne for resultatet sammen med kandidaten. (Klikk.) I alle rollene er man også kvalitetskontrollør: man leser, sjekker og godkjenner. Det er den rollen KI endrer mest.</aside>
+    <aside class="notes">Åpen forskning har vært et ideal i mange år. Med KI blir det en nødvendighet, av fire grunner. (Klikk.) Bevis: når en maskin kan skrive artikkelen og analysere dataene, er det ferdige produktet ikke lenger et bevis på at kandidaten kan forske. Det er bare prosessen som viser hvem som gjorde hva. (Klikk.) Tillit: når tekst kan genereres, kan vi ikke stole på teksten alene. Tilliten må flytte seg til det som kan etterprøves: data, kode, versjoner og logg. (Klikk.) Etterprøvbarhet: modellene skifter hele tiden, som jeg skal vise. Uten versjonsnummer og data kan ingen gjenta resultatet, heller ikke vi selv om et år. (Klikk.) Egne modeller: hvis vi vil ha modeller vi kan stole på, må de trenes på materiale vi vet hva er, og det krever åpne og FAIR data med lisens. Åpen forskning er altså ikke bare et etisk krav, men selve løsningen.</aside>
   </section>
   <section class="center-slide">
     <p class="kicker">Mennesker og maskiner</p>
@@ -287,11 +284,11 @@
   </section>
 </section>
 
-<!-- ===================== 2 DOKUMENTER PROSESSEN ===================== -->
+<!-- ===================== 2 EN ÅPEN OG FAIR PROSESS ===================== -->
 <section>
   <section class="chapter" data-background-color="#C1F7AE">
     <p class="chapnum" style="color:#363644">2</p>
-    <h2 style="color:#363644">Dokumenter prosessen</h2>
+    <h2 style="color:#363644">En åpen og FAIR prosess</h2>
     <aside class="notes">Så verktøyene. De finnes allerede, og de er gratis.</aside>
   </section>
   <section class="center-slide">
