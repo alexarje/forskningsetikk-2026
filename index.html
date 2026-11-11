@@ -185,8 +185,8 @@
   .reveal section.title-photo .big { color: #363644; font-size: .95em; font-weight: 500; text-align: left; margin: 0; }
   .reveal section.title-photo .kicker { color: #4a5568; text-align: left; }
   .reveal section.title-photo .byline { color: #363644; font-size: .75em; text-align: left; margin: 0 0 .3em; }
-  .eco { display: flex; flex-wrap: wrap; gap: .35em; justify-content: center; margin: .3em auto .7em; font-size: .75em; }
-  .eco span { background: #eefbe8; border: 2px solid #8fd67a; border-radius: 999px; padding: .2em .8em; font-weight: 700; }
+  .eco { display: flex; flex-wrap: wrap; gap: .3em; justify-content: center; margin: .3em auto .7em; font-size: .66em; }
+  .eco span { background: #eefbe8; border: 2px solid #8fd67a; border-radius: 999px; padding: .2em .6em; font-weight: 700; }
   .fair { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5em; width: 94%; margin: 0 auto; text-align: left; }
   .fair div { border: 2px solid var(--mm-purple); border-radius: 12px; padding: .4em .6em; font-size: .75em; }
   .fair b { display: block; font-size: 2.4em; line-height: 1; color: #5a4fcf; }
@@ -196,6 +196,13 @@
   .why .card { font-size: .85em; } .why .card p { margin: 0; color: var(--muted); }
   .split2 { display: grid; grid-template-columns: 1fr 1fr; gap: .8em; width: 80%; margin: .5em auto 0; text-align: left; }
   .split2 .card { font-size: .85em; } .split2 ul { margin: .2em 0 0 1em; } .split2 li { margin: .15em 0; }
+  .reveal img.ico { display: inline-block; width: 1.3em; height: 1.3em; vertical-align: middle; margin: -.15em .4em 0 0; max-height: none; border: 0; box-shadow: none; }
+  .reveal .fair img.ico { display: block; width: 2.2em; height: 2.2em; margin: .3em 0 .1em; }
+  .reveal .eco img.ico { width: 1.1em; height: 1.1em; margin: -.1em .3em 0 0; }
+  html.dark .ico { filter: invert(1); }
+  .norcam { display: grid; grid-template-columns: auto 1fr; gap: 1.2em; align-items: center; width: 84%; margin: .4em auto 0; text-align: left; }
+  .reveal .norcam img { height: 56vh; width: auto; margin: 0; box-shadow: 0 4px 18px rgba(0,0,0,.18); }
+  .norcam .big { font-size: 1em; }
 </style>
 </head>
 <body>
@@ -239,22 +246,20 @@
 <section>
   <section class="chapter" data-background-color="#5a4fcf">
     <p class="chapnum" style="color:#fff">1</p>
-    <h2 style="color:#fff">Hvorfor åpen forskning nå?</h2>
+    <h2 style="color:#fff">Åpen forskning</h2>
     <aside class="notes">Først: hvorfor åpen forskning er viktigere nå enn før.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Åpen forskning</p>
     <h2>Hvorfor er åpenhet viktigere med KI?</h2>
     <div class="why">
-      <div class="card purple fragment"><h3>Bevis</h3><p>Maskinene kan lage produktet. Bare prosessen viser hvem som gjorde hva.</p></div>
-      <div class="card green fragment"><h3>Tillit</h3><p>Når tekst kan genereres, flytter tilliten seg til det som kan etterprøves.</p></div>
-      <div class="card purple fragment"><h3>Etterprøvbarhet</h3><p>Modellene skifter. Uten versjoner og data kan ingen gjenta resultatet.</p></div>
-      <div class="card green fragment"><h3>Egne modeller</h3><p>Åpne og FAIR data er grunnlaget for modeller vi kan stole på.</p></div>
+      <div class="card purple fragment"><h3><img class="ico" src="images/ico/search.svg" alt="">Bevis</h3><p>Maskinene kan lage produktet. Bare prosessen viser hvem som gjorde hva.</p></div>
+      <div class="card green fragment"><h3><img class="ico" src="images/ico/shield.svg" alt="">Tillit</h3><p>Når tekst kan genereres, flytter tilliten seg til det som kan etterprøves.</p></div>
+      <div class="card purple fragment"><h3><img class="ico" src="images/ico/repeat.svg" alt="">Etterprøvbarhet</h3><p>Modellene skifter. Uten versjoner og data kan ingen gjenta resultatet.</p></div>
+      <div class="card green fragment"><h3><img class="ico" src="images/ico/chip.svg" alt="">Egne modeller</h3><p>Åpne og FAIR data er grunnlaget for modeller vi kan stole på.</p></div>
     </div>
     <aside class="notes">Åpen forskning har vært et ideal i mange år. Med KI blir det en nødvendighet, av fire grunner. (Klikk.) Bevis: når en maskin kan skrive artikkelen og analysere dataene, er det ferdige produktet ikke lenger et bevis på at kandidaten kan forske. Det er bare prosessen som viser hvem som gjorde hva. (Klikk.) Tillit: når tekst kan genereres, kan vi ikke stole på teksten alene. Tilliten må flytte seg til det som kan etterprøves: data, kode, versjoner og logg. (Klikk.) Etterprøvbarhet: modellene skifter hele tiden, som jeg skal vise. Uten versjonsnummer og data kan ingen gjenta resultatet, heller ikke vi selv om et år. (Klikk.) Egne modeller: hvis vi vil ha modeller vi kan stole på, må de trenes på materiale vi vet hva er, og det krever åpne og FAIR data med lisens. Åpen forskning er altså ikke bare et etisk krav, men selve løsningen.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Mennesker og maskiner</p>
     <h2>Strengere med maskiner enn med mennesker?</h2>
     <div class="layers" style="width:1400px">
       <img class="lay" src="images/fig-roles-1.png" alt="">
@@ -265,7 +270,6 @@
     <aside class="notes">Forskere har alltid fått hjelp. En vitenskapelig assistent finner litteratur, samler inn og analyserer data. (Klikk.) En språkvasker retter språk, form og referanser. De blir takket i forordet, men ingen ber om en logg over hva de endret. (Klikk.) En KI-agent kan gjøre begge jobbene. Og nå krever vi erklæringer, versjonsnummer og helst en andel generert tekst. Er vi strengere med maskiner enn med mennesker? Delvis med god grunn: et menneske kan stå til ansvar, det kan ikke en modell. Men en stipendiat har også fått hjelp av veiledere, kolleger og samtaler i gangen, og det har vi aldri dokumentert. (Klikk.) Så spørsmålet går begge veier: hvis åpenhet er riktig for maskinene, er vi klare for å kreve det samme av mennesker? Verktøyene jeg skal vise, gjør ikke forskjell på dem.</aside>
   </section>
   <section class="center-slide" data-depth="more">
-    <p class="kicker">Agenter</p>
     <h2>Hvem tok valgene underveis?</h2>
     <div class="layers" style="width:1700px">
       <img class="lay" src="images/fig-agent-1.png" alt="">
@@ -274,12 +278,10 @@
     <aside class="notes">Det siste året har KI-verktøyene endret seg. Generativ KI svarer på en bestilling: du spør, den svarer, og du bestemmer hva som skjer videre. (Klikk.) Agentisk KI får et mål og går mange steg på egen hånd: planlegger, bruker verktøy, sjekker og prøver igjen. Da er spørsmålet ikke bare hvem som skrev teksten, men hvem som tok valgene underveis. For en veileder er det det samme spørsmålet vi alltid har stilt om en stipendiat. Det samme skillet kommer i innledningen til DNVA-møtet om forskningsetikk og KI i kveld.</aside>
   </section>
   <section class="center-slide" data-depth="more">
-    <p class="kicker">Uke for uke</p>
     <img class="fig" src="images/fig-uker.png" alt="Endringer per uke i 2026, med og uten KI-medforfatter" style="max-height:70vh">
     <aside class="notes">Av endringene i repoene mine i år har <span data-n="commits_ai_p"></span> en KI-medforfatter. Her er tellingen uke for uke. Lilla er endringer gjort av mennesker alene, grønn er endringer med en KI-medforfatter. Våren var det meste mitt eget; fra sommeren har agentene gjort en stor del av arbeidet. Den siste uken er ikke ferdig. Poenget er ikke tallet, men at det kan telles.</aside>
   </section>
   <section class="center-slide" data-depth="more">
-    <p class="kicker">Et eksempel</p>
     <h2>Agenten rydder, jeg bestemmer</h2>
     <img src="images/osdb-zenodo.png" alt="Zenodo-posten for Oslo Standstill Database, med samlinger og versjoner" style="max-height:58vh;border-radius:10px">
     <aside class="notes">Et eksempel fra i sommer, som jeg også viste for UiOs datamanagere i går. Oslo Standstill Database er femten år med bevegelsesdata fra folk som prøver å stå stille. Jeg hadde tenkt å rydde i den i ti år. Med KI-agenter tok det omtrent to måneder: hver samling er nå sin egen post med egen DOI, med siteringsfil og sjekksummer. Agenten gjorde ryddejobben, jeg leste og bestemte. Det er den arbeidsdelingen jeg ønsker for stipendiatene også.</aside>
@@ -290,17 +292,15 @@
 <section>
   <section class="chapter" data-background-color="#C1F7AE">
     <p class="chapnum" style="color:#363644">2</p>
-    <h2 style="color:#363644">En åpen og FAIR prosess</h2>
+    <h2 style="color:#363644">Født FAIR</h2>
     <aside class="notes">Så verktøyene. De finnes allerede, og de er gratis.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Versjonskontroll</p>
     <h2>Hver endring har en forfatter, et tidspunkt og en melding</h2>
     <pre class="code" style="white-space:pre-wrap;font-size:.62em;max-width:1700px;margin:0 auto"><span data-n="commit_msg"></span></pre>
     <aside class="notes">Dette er en ekte endring fra i forrige uke, i læreboken til emnet Creative AI. Versjonskontrollsystemet git har vært standard i programvareutvikling i tyve år. Hver endring får en forfatter, et tidspunkt, en melding og et fingeravtrykk. Den siste linjen sier at en KI-agent var medforfatter, og hvilken modell. Det er en konvensjon som de vanlige verktøyene allerede forstår: nettstedet viser medforfatteren ved siden av meg, og kommandolinjeverktøyet gh kan hente det samme ut. Det koster meg ingenting ekstra.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Identifikatorer</p>
     <h2>Fra endring til sitering</h2>
     <div class="layers" style="width:1700px">
       <img class="lay" src="images/fig-kjede-0.png" alt="Endring: hvem, når, hva">
@@ -312,13 +312,11 @@
     <aside class="notes">Endringene samles i versjoner. (Klikk.) En versjon arkiveres og får en DOI, en varig identifikator som peker på nøyaktig den versjonen. (Klikk.) Forfatterne knyttes til den med ORCID. (Klikk.) Og en liten fil i prosjektet forteller hvordan det skal siteres, i et format maskiner kan lese. (Klikk.) Alt dette er gratis, åpent og i bruk i dag. Vi trenger ikke å finne opp noe nytt for å dokumentere hva som er gjort, av hvem og når.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Arbeidslogg</p>
     <h2>Skriv ned hva som ble gjort, og av hvem</h2>
     <pre class="code" style="white-space:pre-wrap;font-size:.62em;max-width:1700px;margin:0 auto"><span data-n="worklog"></span></pre>
     <aside class="notes">Det andre verktøyet er det enkleste av alle: en arbeidslogg i ren tekst i hver prosjektmappe. Dette er den siste oppføringen i mappen for dette innlegget, skrevet da lysbildene ble laget. Loggen sier hva som ble gjort, med hvilke verktøy og hvem som bestemte. Den er versjonert som alt annet, så den kan ikke skrives om i ettertid uten at det synes.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Mennesker og maskiner</p>
     <h2>Hvert bidrag har en avsender</h2>
     <div class="layers" style="width:1700px">
       <img class="lay" src="images/fig-provenance-1.png" alt="">
@@ -328,21 +326,29 @@
     <aside class="notes">Sett sammen blir det slik. Hvert steg i et prosjekt er en versjon med et tidspunkt. (Klikk.) Og hvert bidrag har en avsender: et menneske med ORCID, (klikk) eller en maskin med modell og versjon. I programvareutvikling har man arbeidet slik i mange år. For en stipendiat betyr det at veilederen, og senere komiteen, kan se hvem som gjorde hva og når, uten at noen må huske det i ettertid.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Et økosystem</p>
     <h2>FAIR for forskningsprosessen</h2>
     <div class="eco">
-      <span>Repo</span><span>Saker</span><span>Gjennomgang</span><span>Automatiske sjekker</span><span>Utgivelser</span><span>Nettsider</span>
+      <span><img class="ico" src="images/ico/folder.svg" alt="">Repo</span><span><img class="ico" src="images/ico/ticket.svg" alt="">Saker</span><span><img class="ico" src="images/ico/eye.svg" alt="">Gjennomgang</span><span><img class="ico" src="images/ico/check.svg" alt="">Automatiske sjekker</span><span><img class="ico" src="images/ico/tag.svg" alt="">Utgivelser</span><span><img class="ico" src="images/ico/globe.svg" alt="">Nettsider</span>
     </div>
     <div class="fair fragment">
-      <div><b>F</b><h3>Finnbar</h3><p>hver utgivelse får en DOI</p></div>
-      <div><b>A</b><h3>Tilgjengelig</h3><p>åpent, eller bak innlogging</p></div>
-      <div><b>I</b><h3>Interoperabel</h3><p>git, ren tekst, maskinlesbar metadata</p></div>
-      <div><b>R</b><h3>Gjenbrukbar</h3><p>lisens og hele historikken</p></div>
+      <div><b>F</b><img class="ico" src="images/ico/search.svg" alt=""><h3>Finnbar</h3><p>hver utgivelse får en DOI</p></div>
+      <div><b>A</b><img class="ico" src="images/ico/key.svg" alt=""><h3>Tilgjengelig</h3><p>åpent, eller bak innlogging</p></div>
+      <div><b>I</b><img class="ico" src="images/ico/puzzle.svg" alt=""><h3>Interoperabel</h3><p>git, ren tekst, maskinlesbar metadata</p></div>
+      <div><b>R</b><img class="ico" src="images/ico/recycle.svg" alt=""><h3>Gjenbrukbar</h3><p>lisens og hele historikken</p></div>
     </div>
     <aside class="notes">Verktøyene henger sammen i et økosystem. GitHub er det mest brukte, men GitLab, Codeberg og UiOs egen github.uio.no gjør det samme. Repoet holder alle versjonene. Saker er spørsmål og beslutninger, med navn og dato. Gjennomgang er der noen leser en endring og godkjenner den, slik en veileder gjør. Automatiske sjekker bygger dokumentet og kontrollerer tall og lenker hver gang noe endres. Utgivelser arkiveres i Zenodo og får en DOI, og nettsider gjør resultatet lesbart for andre. Disse lysbildene ligger selv på github.uio.no. (Klikk.) Til sammen er dette FAIR, ikke for dataene, men for prosessen. Finnbar, fordi hver utgivelse har en DOI. Tilgjengelig, åpent eller bak innlogging når materialet ikke kan deles. Interoperabel, fordi git og ren tekst kan leses av alle verktøy, også om tjue år. Og gjenbrukbar, med lisens og hele historikken. For en doktorgrad kan avhandlingen være et repo, og veiledningen kan ligge i sakene og gjennomgangene. Da kan komiteen se veien, ikke bare målet.</aside>
   </section>
+  <section class="center-slide">
+    <h2>Mange mennesker, mange agenter</h2>
+    <div class="layers" style="width:1500px">
+      <img class="lay" src="images/fig-samarbeid-0.png" alt="Et felles repo med hovedgren, grener og en utgivelse med DOI">
+      <img class="lay fragment" src="images/fig-samarbeid-1.png" alt="Menneskene: stipendiat, veileder, medforfatter og datamanager, hver med ORCID">
+      <img class="lay fragment" src="images/fig-samarbeid-2.png" alt="Agentene: skriving, analyse, kontroll og kuratering, hver med modell og versjon">
+      <img class="lay fragment" src="images/fig-samarbeid-3.png" alt="Arbeidsflyten: sak, gren, forslag, gjennomgang der et menneske godkjenner, sjekker og flett">
+    </div>
+    <aside class="notes">Hvordan kan mange mennesker og mange agenter skape og skrive sammen i et stort prosjekt? Programvareutviklingen har løst dette for lenge siden. Alt ligger i ett felles repo, med en hovedgren og en utgivelse med DOI til slutt. (Klikk.) Menneskene, stipendiaten, veilederen, medforfattere og datamanageren, bidrar hver med sin ORCID. (Klikk.) Agentene gjør hver sin jobb: skriving, analyse, kontroll og kuratering, hver med modell og versjon. (Klikk.) Og reglene er de samme for alle. Hver oppgave er en sak med en ansvarlig. Ingen, verken menneske eller agent, skriver rett i hovedgrenen: man jobber i sin egen gren og sender et forslag. Et menneske går gjennom forslaget og godkjenner det, og det kan verktøyet håndheve. Automatiske sjekker kontrollerer tall, referanser og lenker. Først da flettes det inn. Hver del kan ha en eier som må godkjenne, og bidragsyterlisten og KI-erklæringen kan lages fra historikken. Mennesket i løkken er altså ikke et prinsipp på papiret, men en regel i verktøyet.</aside>
+  </section>
   <section class="center-slide" data-depth="more">
-    <p class="kicker">Tidsstempel og fingeravtrykk</p>
     <h2>Endre ett tegn, og fingeravtrykket blir et helt annet</h2>
     <div class="vs" style="font-size:.8em;grid-template-columns:auto auto">
       <span class="l" style="text-align:left"><span data-n="s1"></span></span><code><span data-n="h1"></span></code>
@@ -351,7 +357,6 @@
     <aside class="notes">Fingeravtrykket er en kryptografisk sjekksum, her de første 32 tegnene av SHA-256. To setninger som bare skiller seg i det siste tegnet, punktum mot komma, får helt forskjellige fingeravtrykk. Derfor kan ingen endre en versjon i ettertid uten at det synes. Sammen med tidsstempelet er dette et dokumentasjonssystem som er mer presist enn noe vi har hatt i forskningen før.</aside>
   </section>
   <section class="center-slide" data-depth="more">
-    <p class="kicker">Et eksempel</p>
     <h2>Musical Gestures Toolbox</h2>
     <div class="nums">
       <div><b><span data-n="mgt_commits"></span></b><span>endringer siden <span data-n="mgt_first"></span></span></div>
@@ -361,7 +366,6 @@
     <aside class="notes">Et eksempel fra egen forskning: verktøykassen vi bruker til videoanalyse ved RITMO og fourMs-laben. Siste versjon er <span data-n="mgt_version"></span>, utgitt <span data-n="mgt_released"></span>, med DOI <span data-n="mgt_doi"></span>. Hver versjon arkiveres automatisk og får sin egen DOI, så en artikkel kan peke på nøyaktig den koden som ble brukt.</aside>
   </section>
   <section class="center-slide" data-depth="deeper">
-    <p class="kicker">Sitering</p>
     <h2>Slik skal dette siteres</h2>
     <pre class="code" style="font-size:.6em;max-width:1750px;white-space:pre-wrap;margin:0 auto">cff-version: 1.2.0
 title: "<span data-n="mgt_title"></span>"
@@ -371,7 +375,6 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Utdrag av siteringsfilen i repoet, CITATION.cff. Nettsteder og referanseverktøy leser den og lager en riktig referanse, med versjon og DOI.</aside>
   </section>
   <section class="center-slide" data-depth="more">
-    <p class="kicker">Erklæring</p>
     <h2>KI er et verktøy, ikke en forfatter</h2>
     <div class="vs" style="font-size:1em">
       <span class="l">Mennesker</span><span class="m">får</span><span class="r">roller</span>
@@ -389,7 +392,6 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Når prosessen er dokumentert, kan vi også vurdere den.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Forskerutdanning</p>
     <h2>Hva skal til for å bli forsker i dag?</h2>
     <div class="layers" style="width:1600px">
       <img class="lay" src="images/fig-career-1.png" alt="">
@@ -399,19 +401,19 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Tradisjonelt lærer man å forske gjennom hele løpet, og det første selvstendige bidraget kommer gjerne i doktorgraden. (Klikk.) Med KI kan en bachelorstudent i noen fag gjennomføre et ordentlig forskningsprosjekt: samle inn data, analysere og skrive. (Klikk.) I andre fag kan selv en postdoktor slite med å gi et bidrag som maskinene ikke allerede kan gi. Kurvene er en illustrasjon, ikke en måling. Hvis produktet ikke lenger skiller den som kan forske fra den som ikke kan, må vurderingen se på noe annet: prosessen, og om kandidaten kan forklare den.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Vurdering</p>
     <h2>Vurder hele arbeidet, ikke bare artikkelen</h2>
-    <p class="big" style="font-size:1em">Data, kode, video, prosessen, undervisning, formidling og ledelse teller</p>
-    <aside class="notes">Hvis prosessen er dokumentert, kan vi også vurdere den. Det er tanken bak NOR-CAM, rammeverket for vurdering av akademiske karrierer som Universitets- og høgskolerådet la frem i 2021. Det regner forskningsresultater bredt, med data, kildekode og video, og det har forskningsprosessen som et eget kompetanseområde, ved siden av undervisning, samspill med samfunnet og ledelse. Det passer godt med spørsmålet Astrid stiller i panelet: er artikler og disputas det produktet vi trenger?</aside>
+    <div class="norcam">
+      <img src="images/nor-cam-rapport.png" alt="Forsiden av NOR-CAM-rapporten fra Universitets- og høgskolerådet, 2021">
+      <p class="big">NOR-CAM, 2021: data, kode, video, prosessen, undervisning, formidling og ledelse teller</p>
+    </div>
+    <aside class="notes">Hvis prosessen er dokumentert, kan vi også vurdere den. Det er tanken bak NOR-CAM, rapporten og rammeverket for vurdering av akademiske karrierer som Universitets- og høgskolerådet la frem i 2021. Det regner forskningsresultater bredt, med data, kildekode og video, og det har forskningsprosessen som et eget kompetanseområde, ved siden av undervisning, samspill med samfunnet og ledelse. Det passer godt med spørsmålet Astrid stiller i panelet: er artikler og disputas det produktet vi trenger?</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Muntlig og helhetlig</p>
     <h2>La kandidaten forklare arbeidet</h2>
     <p class="big" style="font-size:1em">Et større arbeid, forsvart muntlig</p>
     <aside class="notes">Når en KI kan skrive en tekst som ser ferdig ut, blir det muntlige viktigere, ikke mindre viktig. Disputasen er allerede en muntlig prøve. Vi kan styrke den: vurdere et større arbeid, en portefølje med data, kode og tekst, og la kandidaten forklare valgene sine. I kunstnerisk forskning gjør vi dette allerede med eksposisjoner, og i emnet Creative AI er eksamen en portefølje med en logg over hvordan verktøyene ble brukt.</aside>
   </section>
   <section class="center-slide" data-depth="more">
-    <p class="kicker">Publisering</p>
     <h2>Åpen publisering, åpen vurdering</h2>
     <div class="layers" style="width:1600px">
       <img class="lay" src="images/fig-prc-0.png" alt="Publiser først, gratis">
@@ -421,7 +423,6 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Den samme åpenheten er på vei inn i publiseringen. Open Research Europe er den europeiske publiseringsplattformen som fra høsten 2026 drives av CERN, med EU-kommisjonen og forskningsråd i flere land bak, også Norges forskningsråd. Det er diamant-åpen tilgang: gratis å lese og gratis å publisere. Modellen kalles publiser, vurder, kurater: artikkelen publiseres først etter en enkel sjekk, (klikk) fagfellevurderingen skjer etterpå og er åpen for alle, (klikk) og så samles det beste. Da blir også vurderingen en del av dokumentasjonen. Kilde: Forskningsrådets nyhet av 26. mars 2026.</aside>
   </section>
   <section data-depth="deeper">
-    <p class="kicker">Mer radikalt</p>
     <h2>Andre måter å vurdere på</h2>
     <ul style="font-size:.85em">
       <li class="fragment">En fortellende CV i stedet for en publikasjonsliste</li>
@@ -442,13 +443,11 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Til slutt det vi ikke har kontroll på.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Det vi ikke har kontroll på</p>
     <h2>Det vi ikke kan dokumentere, er modellen</h2>
     <img class="fig" src="images/fig-svartboks.png" alt="Data, kode, logg og versjon kan dokumenteres; modellen kan ikke det" style="max-height:52vh">
     <aside class="notes">Alt til venstre kan vi dokumentere. Det vi ikke har kontroll på, er innholdet i modellene, særlig de kommersielle. Vi vet ikke hva de er trent på, og en modell kan ikke peke tilbake til kildene sine. Vi kan skrive at vi brukte en modell og hvilken versjon, men ikke hva som er inne i den.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Verktøy og modell</p>
     <h2>Verktøyet er ikke modellen</h2>
     <div class="layers" style="width:1600px">
       <img class="lay" src="images/fig-verktoy-modell-0.png" alt="Agentverktøy: Claude Code, Codex, Copilot i VS Code, Cursor og opencode">
@@ -457,7 +456,6 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Et skille mange overser. Øverst er agentverktøyene, det man sitter i og gir oppgaver til. (Klikk.) Under er modellene, motoren som gjør jobben. Noen verktøy er knyttet til én leverandør, andre kan bruke mange modeller, også åpne modeller som kjører lokalt. Samme modell sitter i flere verktøy, og samme verktøy kan bytte modell midt i et prosjekt. Når en stipendiat skriver "jeg brukte KI", må vi derfor spørre: hvilket verktøy, hvilken modell, og hvilken versjon?</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Versjoner</p>
     <h2>Modellene skifter hele tiden</h2>
     <div class="layers" style="width:1500px">
       <img class="lay" src="images/fig-modellversjoner-0.png" alt="Modellversjonene som har vært medforfattere på Alexanders commits i 2026, som stolper fra første til siste dag">
@@ -466,7 +464,6 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Og modellene endrer seg. Dette er modellversjonene som har vært medforfatter på endringene mine i år, hentet fra git-historikken: <span data-n="n_models"></span> versjoner siden juni, og hver av dem har vært i bruk i noen uker eller måneder før neste tok over. Det samme spørsmålet gir et annet svar med en ny versjon, og de gamle versjonene forsvinner fra tjenestene. (Klikk.) Og det er bare én leverandør. I samme periode har de andre store selskapene og de åpne modellene kommet med nye versjoner hele tiden: her er <span data-n="n_releases"></span> av utgivelsene i år fra OpenAI, Google og de åpne modellene Qwen, DeepSeek og Mistral. Å skrive "ChatGPT" eller "Claude" i metodekapittelet er som å oppgi "et mikroskop" uten merke og modell. Derfor må versjonsnummeret være med, slik det står i commit-linjen vi så i sted, og slik det står i KI-erklæringen.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">MishMash</p>
     <h2>Derfor egne modeller</h2>
     <p class="big" style="font-size:1em">Små modeller, kjent materiale, åpen kode</p>
     <aside class="notes">Derfor trenger vi modeller vi har kontroll på: små modeller trent på eget materiale, der vi vet hva som er med, og større norske modeller med innsyn i treningsdata. Det er et hovedfokus i MishMash. Da kan hele kjeden dokumenteres, også modellen.</aside>
@@ -480,11 +477,10 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Hva betyr dette i praksis?</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Akselerator</p>
     <h2>Agenten kan gjøre stipendiaten raskere god</h2>
     <div class="split2">
-      <div class="card green fragment"><h3>Agenten</h3><ul><li>stiller spørsmål</li><li>følger opp</li><li>foreslår metoder og litteratur</li><li>gir tilbakemelding med en gang</li></ul></div>
-      <div class="card purple fragment"><h3>Veilederen</h3><ul><li>erfaring og skjønn</li><li>fagfellesskap og nettverk</li><li>ansvar</li><li>leser loggen</li></ul></div>
+      <div class="card green fragment"><h3><img class="ico" src="images/ico/robot.svg" alt="">Agenten</h3><ul><li>stiller spørsmål</li><li>følger opp</li><li>foreslår metoder og litteratur</li><li>gir tilbakemelding med en gang</li></ul></div>
+      <div class="card purple fragment"><h3><img class="ico" src="images/ico/person.svg" alt="">Veilederen</h3><ul><li>erfaring og skjønn</li><li>fagfellesskap og nettverk</li><li>ansvar</li><li>leser loggen</li></ul></div>
     </div>
     <p class="big fragment" style="font-size:1.05em;margin-top:.5em">Men bare med et menneske i løkken</p>
     <aside class="notes">Til nå har jeg snakket om KI som noe vi må kontrollere. Men agentisk KI kan også være en akselerator for å lære å forske. (Klikk.) En agent kan stille spørsmål om forskningsspørsmålet, følge opp svarene, foreslå metoder og litteratur, og gi tilbakemelding på tekst og kode med en gang, når som helst, og så mange ganger stipendiaten vil. Det er mentorering i et tempo ingen veileder kan gi. (Klikk.) Veilederen blir ikke overflødig, men får en annen rolle: erfaring og skjønn, fagfellesskapet og nettverket, og ansvaret. Og hvis prosessen er åpen, kan veilederen lese loggen og se hva som har skjedd mellom møtene. (Klikk.) Men det avgjørende er et menneske i løkken. Agenten må brukes til å lære, ikke til å slippe å lære: la den spørre, ikke svare, og det kan man faktisk be den om. Og noen må lese det den har gjort og ta valgene: stipendiaten i hvert steg, veilederen jevnlig. Uten et menneske i løkken får vi et produkt uten forsker.</aside>
@@ -511,7 +507,6 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">I tråd med temaet: slik ble presentasjonen laget. Jeg ga en KI-agent (Claude, Anthropic) idéen og temaene: versjonskontroll, tidsstempler, DOI, Open Research Europe og NOR-CAM. (Klikk.) Den laget et første utkast, hentet tallene med et skript fra git-historikken og tegnet figurene. (Klikk.) Jeg kommenterte, og den laget en ny versjon. (Klikk.) Og så flere kommentarer og flere versjoner: lysbildene har nå <span data-n="deck_commits"></span> lagrede versjoner i git, de fleste fra kvelden før. (Klikk.) Resultatet er lysbildene, og ansvaret er mitt.</aside>
   </section>
   <section class="center-slide" data-depth="more">
-    <p class="kicker">Presentasjonens egen logg</p>
     <pre class="code" style="font-size:.7em;max-width:1500px;margin:0 auto"><span data-n="gitlog"></span></pre>
     <aside class="notes">Og presentasjonen har selvsagt sin egen versjonshistorikk. Dette er de siste endringene, hentet automatisk fra git.</aside>
   </section>
