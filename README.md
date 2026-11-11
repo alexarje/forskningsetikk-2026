@@ -16,7 +16,7 @@ Se presentasjonen: https://pages.github.uio.no/alexanje/forskningsetikk-2026/
 
 Ti minutter, på norsk. Påstanden er at det viktigste forskningsetiske grepet med kunstig intelligens er mer åpenhet, og at verktøyene for å få det til allerede finnes: versjonskontroll, tidsstempler, varige identifikatorer (DOI og ORCID), siteringsfiler og arbeidslogger gjør det mulig å dokumentere hva som er gjort av mennesker og hva av maskiner. Det vi ikke har kontroll på, er innholdet i svart-boks-modellene, særlig de kommersielle, og derfor trenger vi egne modeller med innsyn i treningsdata.
 
-Innlegget handler om forskerutdanningen: når maskinene kan levere produktet, blir en åpen og FAIR forskningsprosess viktigere enn noen gang. Det har fire kapitler: åpen forskning, født FAIR (med GitHub og lignende verktøy som et økosystem for åpenhet, FAIR for forskningsprosessen, og hvordan mange mennesker og mange agenter kan skrive sammen), vurder prosessen og kjenn modellen (der også at verktøyet ikke er modellen, og at modellene skifter, så versjonsnummeret må med), og slutter med tre råd til stipendiater og veiledere og med hvordan presentasjonen ble laget. Nederst i hver stabel ligger mer stoff til panelet.
+Hovedbudskapet er at vi ikke trenger å finne opp hjulet. Idéene og verktøyene for åpen forskning og en FAIR forskningsprosess finnes allerede, og med KI blir de viktigere enn noen gang. Det som mangler, er en kultur for å bruke dem i forskerutdanningen. Infrastrukturen har fortsatt hull, og det trengs mennesker, både i løkken når agentene arbeider og som støtte for forskerne. Innlegget har fem kapitler: åpen forskning, født FAIR, en kultur i forskerutdanningen, hull i landskapet og mennesker i løkken. Nederst i hver stabel ligger mer stoff til panelet.
 
 ## Bruk
 
