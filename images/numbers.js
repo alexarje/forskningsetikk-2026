@@ -1,6 +1,6 @@
 window.NUMBERS = {
- "commits": 4742,
- "commits_ai": 2592,
+ "commits": 4746,
+ "commits_ai": 2596,
  "commits_ai_p": "55 %",
  "repos": 64,
  "repos_ai": 42,
@@ -15,8 +15,9 @@ window.NUMBERS = {
  "s2": "Jeg skrev denne setningen selv,",
  "h1": "778ba1dc8c649fa48e3425946b689f9f",
  "h2": "b1f019b53121b659c2f2db2270204060",
+ "n_models": 7,
  "updated": "2026-11-11",
- "worklog": "## 2026-11-11, ny struktur\n\nInnlegget er bygget om rundt forskerutdanningen, etter Alexanders bestilling: når maskinene kan levere produktet, må vi lære bort og vurdere prosessen. Fire kapitler med farget bakgrunn (veiledning er kvalitetskontroll, dokumenter prosessen, vurder prosessen, kjenn modellen) og tre råd til slutt. Fra DNVA-innledningen 12. november: generativ eller agentisk KI og kurvene for når man kan gi et selvstendig bidrag. Fra foredraget for datamanagerne 11. november: agenten rydder datasettet, mennesket bestemmer, og paradata i stedet for skjemaer. Lysbildet \"Ti minutter\" er fjernet, og \"Hvor jeg snakker fra\" er nytt etter tittelen.",
- "gitlog": "8da6886  2026-11-11  README for Pages-kopien\ne80d466  2026-11-11  Valgfri setning fra DMN-salen i notatene til 9/0; make_site.py for Pages\n540db28  2026-11-10  Klammene løst: UiO har undertegnet avtalen (CoARA), to runder i samskapingsfiguren; tallene oppdatert\nc128b79  2026-11-06  Rollefiguren og kvalitetskontroll, større kodeblokker, og tittelen hentet fra siteringsfilen.\neb30488  2026-11-06  Første utkast: elleve temaer fra egen bruk til hvordan presentasjonen ble laget.",
+ "worklog": "## 2026-11-11, ny struktur\n\nInnlegget er bygget om rundt forskerutdanningen, etter Alexanders bestilling: når maskinene kan levere produktet, må vi lære bort og vurdere prosessen. Fire kapitler med farget bakgrunn (veiledning er kvalitetskontroll, dokumenter prosessen, vurder prosessen, kjenn modellen) og tre råd til slutt. Fra DNVA-innledningen 12. november: generativ eller agentisk KI og kurvene for når man kan gi et selvstendig bidrag. Fra foredraget for datamanagerne 11. november: agenten rydder datasettet, mennesket bestemmer, og paradata i stedet for skjemaer. Lysbildet \"Ti minutter\" er fjernet, og \"Hvor jeg snakker fra\" er nytt etter tittelen.\n\nTittellysbildet har nå Alexanders fotografi av merkestikker i tåke (20. februar 2024) over hele skjermen, med navnet hans, tittel og undertittel øverst, navn, sted og dato nederst; kjedefiguren er tatt ut der (den står fortsatt under 2). Overskriften på \"Hvor jeg snakker fra\" er fjernet.",
+ "gitlog": "dae404d  2026-11-11  Tittel og undertittel øverst, navn, sted og dato nederst\na8fe50f  2026-11-11  Tittelteksten øverst og nederst, bildet fritt i midten\n6873fbe  2026-11-11  Tittel med fotografi og navn; uten overskrift på 0/1\nea9a22b  2026-11-11  PDF bygget på nytt\nf27024d  2026-11-11  Ny struktur rundt forskerutdanningen: fire kapitler på farget bakgrunn, hvor jeg snakker fra, figurer fra DNVA og DMN\n8da6886  2026-11-11  README for Pages-kopien\ne80d466  2026-11-11  Valgfri setning fra DMN-salen i notatene til 9/0; make_site.py for Pages\n540db28  2026-11-10  Klammene løst: UiO har undertegnet avtalen (CoARA), to runder i samskapingsfiguren; tallene oppdatert",
  "commit_msg": "commit 0b0df5e\nAuthor: Alexander Refsum Jensenius\nDate:   2026-11-06 07:44\n\n    Ten weeks: images and video merged as chapter 5, code and agents as chapter 8, and every chapter brought up to the Sensing book conventions.\n\n    Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>"
 };
