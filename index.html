@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transparens er ikke så vanskelig · Forum for forskningsetikk, 12. november 2026</title>
+<link rel="stylesheet" href="lib/reveal/reset.css">
+<link rel="stylesheet" href="lib/reveal/reveal.css">
+<link rel="stylesheet" href="lib/reveal/theme/white.css" id="theme">
+<style>
+  :root {
+    --r-main-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --r-heading-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --r-heading-text-transform: none;
+    --r-heading-font-weight: 700;
+    --r-heading1-size: 2.4em;
+    --r-heading2-size: 1.7em;
+    --r-heading3-size: 1.2em;
+    --r-main-font-size: 50px;
+    --r-link-color: #5a4fcf; --r-main-color: #363644; --r-heading-color: #363644;
+    --accent: #5a4fcf; --good: #2f855a; --bad: #c53030; --muted: #718096;
+    --mm-purple: #A7A1F4; --mm-green: #C1F7AE; --mm-dark: #363644;
+  }
+  .reveal h1, .reveal h2, .reveal h3 { letter-spacing: -0.01em; margin-bottom: 0.4em; }
+  .reveal .slides section { text-align: left; }
+  .reveal .slides section.center-slide { text-align: center; }
+  .reveal p, .reveal li { line-height: 1.35; }
+  .reveal ul { margin-left: 0.6em; }
+  .reveal li { margin: 0.25em 0; }
+  .reveal img, .reveal svg { max-height: 62vh; box-shadow: none; border: none; background: none; }
+  .reveal img.shot { border: 1px solid #cbd5e0; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+  .reveal img.photo { border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+  .reveal .fig { display: block; width: 100%; max-height: 72vh; margin: 0 auto; }
+  .reveal .tall { max-height: 78vh; }
+  .kicker { color: var(--muted); font-size: 0.6em; text-transform: uppercase; letter-spacing: .12em; margin-bottom: .2em; }
+  .big { font-size: 1.5em; font-weight: 700; line-height: 1.2; }
+  .huge { font-size: 3.2em; font-weight: 700; line-height: 1.1; }
+  .good { color: var(--good); } .bad { color: var(--bad); } .accent { color: var(--accent); } .muted { color: var(--muted); }
+  .purple { color: #5a4fcf; } .green { color: #2f855a; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2em; align-items: center; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; align-items: start; }
+  .cols.top { align-items: start; }
+  .card { border: 2px solid #e2e8f0; border-radius: 12px; padding: .5em .7em; font-size: .7em; height: 100%; box-sizing: border-box; }
+  .card h3 { font-size: 1.15em; margin: 0 0 .3em 0; }
+  .card-ill { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; margin-top: .3em; }
+  .layers { position: relative; margin: 0 auto; }
+  .reveal .layers img { display: block; width: 100%; height: auto; max-height: none; margin: 0; }
+  .reveal .layers img + img { position: absolute; left: 0; top: 0; }
+  .card.purple { border-color: var(--mm-purple); } .card.green { border-color: #8fd67a; }
+  .caption { font-size: .55em; color: var(--muted); margin-top: .3em; }
+  .reveal a { text-decoration: underline; text-decoration-color: rgba(43,108,176,.4); text-underline-offset: 3px; }
+  .quote { font-size: 1.05em; font-style: italic; border-left: 6px solid var(--mm-purple); padding-left: .6em; margin: .4em 0; }
+  .reveal .footer { position: fixed; bottom: 14px; left: 22px; font-size: 14px; color: #a0aec0; z-index: 10; }
+  .reveal .progress { color: var(--accent); }
+
+  /* Map of the talk */
+  .map { display: grid; grid-template-columns: repeat(6, 1fr); gap: .35em; font-size: .5em; width: 100%; }
+  .map div { border: 2px solid #e2e8f0; border-radius: 8px; padding: .5em .3em; text-align: center; min-height: 3em; display: flex; align-items: center; justify-content: center; }
+  .map .h { background: #f0eefc; border-color: var(--mm-purple); font-weight: 700; }
+  .map .mm { background: #eefbe8; border-color: #8fd67a; font-weight: 700; }
+
+  /* Headline collage */
+  .collage { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5em; align-items: center; }
+  .collage img { max-height: 34vh; width: 100%; object-fit: cover; object-position: top; border: 1px solid #cbd5e0; border-radius: 6px; box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+  .collage img:nth-child(odd) { transform: rotate(-2deg); }
+  .collage img:nth-child(even) { transform: rotate(1.5deg); }
+
+  /* Photo grids */
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; }
+  .grid3 figure { margin: 0; text-align: center; }
+  .grid3 img { width: 100%; height: 30vh; object-fit: cover; border-radius: 8px; }
+  .grid3 figcaption { font-size: .5em; color: var(--muted); margin-top: .2em; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .8em; }
+  .grid2 figure { margin: 0; text-align: center; }
+  .grid2 img { width: 100%; height: 60vh; object-fit: cover; border-radius: 10px; }
+  .grid2 figcaption { font-size: .5em; color: var(--muted); margin-top: .3em; }
+
+  /* Embedded apps and videos */
+  .appwrap { width: 1800px; height: 880px; overflow: hidden; margin: 0 auto; border: 2px solid #e2e8f0; border-radius: 12px; }
+  .appwrap iframe { width: 1200px; height: 587px; transform: scale(1.5); transform-origin: 0 0; border: 0; }
+  .reveal pre.code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .55em; line-height: 1.4; background: #f7fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: .8em 1em; margin: 0; text-align: left; white-space: pre; box-shadow: none; width: auto; }
+  .reveal table.cmp { font-size: .7em; border-collapse: collapse; margin: 0; width: 100%; text-align: left; }
+  .reveal table.cmp th, .reveal table.cmp td { padding: .3em .8em; border-bottom: 2px solid #e2e8f0; }
+  .reveal table.cmp th { font-weight: 700; }
+  .reveal .strip { font-size: 3.2em; font-weight: 700; margin: 0; line-height: 1.1; }
+  .netwrap { width: 1800px; height: 880px; overflow: hidden; margin: 0 auto; border: 2px solid #e2e8f0; border-radius: 12px; }
+  .reveal .netwrap iframe { width: 1800px; max-width: none; height: 1500px; max-height: none; margin-top: -560px; border: 0; }
+  .video { width: 1600px; height: 900px; border: 0; margin: 0 auto; display: block; border-radius: 12px; background: #000; }
+
+  /* Word slides */
+  .words { display: flex; gap: .4em; align-items: baseline; flex-wrap: wrap; }
+  .words .w { font-size: 1.9em; font-weight: 700; }
+  .multi { font-size: 2.2em; font-weight: 700; line-height: 1.15; }
+  .multi span { display: block; padding-left: 1.6em; }
+  .multi .pre { padding-left: 0; color: var(--muted); }
+  .sectors { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1em; margin-top: 1em; align-items: start; text-align: center; font-size: .55em; }
+  .sectors svg { display: block; width: 55%; height: auto; aspect-ratio: 1; margin: 0 auto .4em; }
+  .sentence { font-size: 1.35em; line-height: 1.5; font-weight: 500; }
+  .sentence .stack { display: inline-flex; flex-direction: column; vertical-align: middle; line-height: 1.05; margin: 0 .25em; }
+  .sentence .stack span.purple, .sentence .stack span.green { font-weight: 700; }
+  .vs { display: grid; grid-template-columns: 1fr auto 1fr; gap: .3em .6em; align-items: center; font-size: .95em; margin: .25em 0; }
+  .vs .l { text-align: right; color: #5a4fcf; font-weight: 700; } .vs .r { text-align: left; color: #2f855a; font-weight: 700; } .vs .m { color: var(--muted); font-size: .6em; }
+  .nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; text-align: center; }
+  .nums div { border-radius: 14px; padding: .5em .3em; background: #f0eefc; }
+  .nums div:nth-child(even) { background: #eefbe8; }
+  .nums b { display: block; font-size: 2.2em; line-height: 1.1; }
+  .nums span { font-size: .6em; color: #4a5568; }
+  .wish { font-size: 1.05em; margin: .45em 0; display: flex; gap: .5em; align-items: baseline; }
+  .wish b { color: #5a4fcf; font-size: 1.4em; min-width: 1.2em; }
+  .qmark { font-size: 14em; font-weight: 700; line-height: 1; color: var(--mm-purple); }
+  .qmark i { font-style: normal; color: #8fd67a; }
+  .overlay { background: rgba(255,255,255,.82); display: inline-block; padding: .3em .7em; border-radius: 12px; }
+
+
+  /* Deck additions */
+  .reveal img.fig { width: auto; max-width: 100%; object-fit: contain; }
+  .roles { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1em; align-items: center; text-align: center; }
+  .roles .r p { font-size: 1.1em; font-weight: 700; margin: 1.2em 0; }
+  .reveal .overlay { position: absolute; left: 0; bottom: 0; text-align: left; }
+  .reveal .overlay .kicker { margin-bottom: .1em; }
+  html.dark .reveal img.fig.keep { filter: none; }
+  #depth { position: fixed; right: 22px; bottom: 14px; z-index: 10; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: #a0aec0; }
+  body.on-surface .footer, body.on-surface #depth { display: none; }
+  html.dark #depth { color: #4a5568; }
+  @media print { #depth { display: none; } }
+
+  /* ---- Dark mode ---- */
+  html.dark {
+    --r-background-color: #14171c;
+    --r-main-color: #e6e9ee;
+    --r-heading-color: #ffffff;
+    --r-link-color: #b8b3ff;
+    --muted: #a0aec0;
+    --accent: #b8b3ff; --good: #68d391; --bad: #fc8181;
+    color-scheme: dark;
+  }
+  html.dark body, html.dark .reveal-viewport { background: #14171c; }
+  html.dark .reveal .card, html.dark .map div, html.dark .appwrap, html.dark .netwrap, html.dark .reveal table.cmp th, html.dark .reveal table.cmp td { border-color: #2d3748; }
+  html.dark .reveal pre.code { background: #1a202c; border-color: #2d3748; }
+  html.dark .reveal .card.purple { border-color: var(--mm-purple); } html.dark .reveal .card.green { border-color: #8fd67a; }
+  html.dark .map .h { background: #26243a; } html.dark .map .mm { background: #1f2e1c; }
+  html.dark .nums div { background: #26243a; } html.dark .nums div:nth-child(even) { background: #1f2e1c; } html.dark .nums span { color: #cbd5e0; }
+  html.dark .purple { color: #b8b3ff; } html.dark .green { color: #9ae6b4; } html.dark .vs .l { color: #b8b3ff; } html.dark .vs .r { color: #9ae6b4; } html.dark .wish b { color: #b8b3ff; }
+  html.dark .reveal img.shot, html.dark .collage img { border-color: #2d3748; box-shadow: 0 6px 18px rgba(0,0,0,.5); }
+  html.dark .reveal img.fig { filter: invert(0.93) hue-rotate(180deg); }
+  /* inline SVGs adapt via currentColor; these two fills swap with the theme */
+  .reveal svg .paper { fill: #fff; } .reveal svg .panel { fill: #f7f7fb; }
+  html.dark .reveal svg .paper { fill: #1a1d24; } html.dark .reveal svg .panel { fill: #262b36; }
+  html.dark .overlay { background: rgba(20,23,28,.8); }
+  html.dark .reveal .footer { color: #4a5568; }
+  html.dark .reveal .progress, html.dark .reveal .controls { color: var(--accent); }
+  html.dark .reveal .slide-number { background: transparent; color: #718096; }
+  #theme-toggle {
+    position: fixed; top: 14px; right: 18px; z-index: 50;
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid #cbd5e0;
+    background: rgba(255,255,255,.85); color: #4a5568; font-size: 20px; line-height: 1;
+    cursor: pointer; opacity: .35; transition: opacity .2s;
+  }
+  #theme-toggle:hover, #theme-toggle:focus { opacity: 1; }
+  html.dark #theme-toggle { background: rgba(20,23,28,.85); border-color: #4a5568; color: #e2e8f0; }
+  @media print { #theme-toggle { display: none; } }
+
+  /* Forum deck */
+  html.dark .reveal img.fig.keep { filter: none; }
+  .reveal .layers img.keep { width: 100%; height: auto; max-height: none; margin: 0; }
+  .reveal .layers img.lay { display: block; width: 100%; height: auto; max-height: none; margin: 0; }
+  .reveal .layers img.lay + img.lay { position: absolute; left: 0; top: 0; }
+  html.dark .reveal .layers img.lay { filter: invert(0.93) hue-rotate(180deg); }
+  .reveal .q { font-size: 1.9em; font-weight: 700; line-height: 1.15; margin: .2em auto .4em; max-width: 1600px; }
+  .panel { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8em; margin-top: .4em; }
+  .panel figure { margin: 0; text-align: center; }
+  .reveal .panel img { width: 100%; height: 50vh; max-height: none; object-fit: cover; border-radius: 10px; }
+  .panel figcaption { font-size: .6em; line-height: 1.3; margin-top: .4em; }
+  .panel figcaption b { display: block; font-size: 1.25em; margin-bottom: .15em; }
+</style>
+</head>
+<body>
+<script>
+  // Set the theme before first paint, remembering the choice in the browser.
+  (function () {
+    var saved = null; try { saved = localStorage.getItem('forskningsetikk-theme'); } catch (e) {}
+    var q = location.search;
+    var dark = /[?&]dark\b/.test(q) ? true : /[?&]light\b/.test(q) ? false : saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark) document.documentElement.classList.add('dark');
+  })();
+</script>
+<button id="theme-toggle" type="button" title="Lys eller mørk (tasten d)" aria-label="Bytt mellom lys og mørk modus">◐</button>
+<div class="reveal">
+<div class="slides">
+
+<!-- ===================== 0 TITTEL ===================== -->
+<section>
+  <section class="center-slide">
+    <p class="kicker">Forum for forskningsetikk · Universitetet i Oslo · 12. november 2026</p>
+    <div class="layers" style="width:1500px">
+      <img class="lay" src="images/fig-kjede-0.png" alt="Endring: hvem, når, hva">
+      <img class="lay" src="images/fig-kjede-1.png" alt="Versjon">
+      <img class="lay" src="images/fig-kjede-2.png" alt="Arkiv med DOI">
+      <img class="lay" src="images/fig-kjede-3.png" alt="Person med ORCID">
+      <img class="lay" src="images/fig-kjede-4.png" alt="Sitering">
+    </div>
+    <h1 style="margin-top:.2em">Transparens er ikke så vanskelig</h1>
+    <p class="big" style="font-size:1.2em">Vi har alt vi trenger for fornuftig bruk av KI</p>
+    <aside class="notes">Jeg er Alexander Refsum Jensenius, professor i musikkteknologi og leder for MishMash, senter for KI og kreativitet. Påstanden min er enkel: det viktigste forskningsetiske grepet med kunstig intelligens er mer åpenhet, og verktøyene for å få det til har vi allerede. Figuren er kjeden jeg skal gå gjennom: en endring, en versjon, et arkiv, en person og en sitering, alt med varige identifikatorer.</aside>
+  </section>
+  <section class="center-slide">
+    <p class="kicker">Ti minutter</p>
+    <div class="map" style="grid-template-columns:repeat(3,1fr);font-size:.85em;gap:.5em">
+      <div class="h">Egen bruk</div><div class="mm">Verktøyene finnes</div><div class="h">Publisering</div>
+      <div class="mm">Vurdering</div><div class="h">Svart boks</div><div class="mm">For stipendiater</div>
+    </div>
+    <aside class="notes">Seks deler: hvordan jeg bruker KI selv, verktøyene som allerede finnes, publisering, vurdering, det vi ikke har kontroll på, og hva dette betyr for stipendiater og veiledere.</aside>
+  </section>
+</section>
+
+<!-- ===================== 1 PROFESSOREN ===================== -->
+<section>
+  <section class="center-slide">
+    <div class="layers" style="width:1700px">
+      <img class="fig keep" src="images/fig-roller-0.svg" alt="Portrett i midten">
+      <img class="fig keep" src="images/fig-roller-1.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-2.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-3.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-4.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-5.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-6.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-7.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-8.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-9.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-10.svg" alt="En rolle til på ringen">
+      <img class="fig keep" src="images/fig-roller-11.svg" alt="En rolle til på ringen">
+    </div>
+    <p class="big fragment" style="font-size:1.1em;margin-top:-.4em">Jobben er ofte kvalitetskontroll, nå også av maskiner</p>
+    <aside class="notes">Først et perspektiv. Som professor har jeg mange roller: forsker, forfatter, skaper, formidler, leder, veileder, sensor, underviser og flere. I nesten alle jobber jeg gjennom andre: stipendiater, studenter, assistenter, medforfattere og ingeniører, som lager resultater av ulik kvalitet. En stor del av jobben er kvalitetskontroll. (Klikk.) Det endrer seg egentlig ikke med KI. Forskjellen er at vi nå også må forholde oss til maskiner, i tillegg til mennesker. Og kvalitetskontroll krever det samme i begge tilfeller: at vi kan se hva som er gjort, av hvem og når.</aside>
+  </section>
+</section>
+
+<!-- ===================== 1 EGEN BRUK ===================== -->
+<section>
+  <section class="center-slide">
+    <p class="kicker">Egen bruk</p>
+    <p class="huge"><span data-n="commits_ai_p"></span></p>
+    <p class="big" style="font-size:1.1em">av endringene i kode og tekst i repoene mine i 2026 har en KI-medforfatter</p>
+    <aside class="notes">Jeg bruker KI-verktøy hver dag, i forskning, skriving, programmering og ledelse. Og jeg vet ganske nøyaktig hvor mye, fordi alt jeg lager ligger i versjonskontroll. Av <span data-n="commits"></span> endringer i <span data-n="repos"></span> repoer i år har <span data-n="commits_ai"></span> en linje som sier at en KI-agent var med. Det gjelder <span data-n="repos_ai"></span> av repoene. Tallet er telt av et skript som leser git-historikken, ikke anslått av meg. Det omfatter også endringer andre har gjort i de samme repoene.</aside>
+  </section>
+  <section class="center-slide" data-depth="more">
+    <p class="kicker">Uke for uke</p>
+    <img class="fig" src="images/fig-uker.png" alt="Endringer per uke i 2026, med og uten KI-medforfatter" style="max-height:70vh">
+    <aside class="notes">Den samme tellingen uke for uke. Lilla er endringer gjort av mennesker alene, grønn er endringer med en KI-medforfatter. Våren var det meste mitt eget; fra sommeren har agentene gjort en stor del av arbeidet. Den siste uken er ikke ferdig. Poenget er ikke tallet, men at det kan telles.</aside>
+  </section>
+</section>
+
+<!-- ===================== 2 VERSJONSKONTROLL ===================== -->
+<section>
+  <section class="center-slide">
+    <p class="kicker">Versjonskontroll</p>
+    <h2>Hver endring har en forfatter, et tidspunkt og en melding</h2>
+    <pre class="code" style="white-space:pre-wrap;font-size:.62em;max-width:1700px;margin:0 auto"><span data-n="commit_msg"></span></pre>
+    <aside class="notes">Dette er en ekte endring fra i forrige uke, i læreboken til emnet Creative AI. Versjonskontrollsystemet git har vært standard i programvareutvikling i tyve år. Hver endring får en forfatter, et tidspunkt, en melding og et fingeravtrykk. Den siste linjen sier at en KI-agent var medforfatter, og hvilken modell. Det er en konvensjon som de vanlige verktøyene allerede forstår: nettstedet viser medforfatteren ved siden av meg, og kommandolinjeverktøyet gh kan hente det samme ut. Det koster meg ingenting ekstra.</aside>
+  </section>
+  <section class="center-slide" data-depth="more">
+    <p class="kicker">Tidsstempel og fingeravtrykk</p>
+    <h2>Endre ett tegn, og fingeravtrykket blir et helt annet</h2>
+    <div class="vs" style="font-size:.8em;grid-template-columns:auto auto">
+      <span class="l" style="text-align:left"><span data-n="s1"></span></span><code><span data-n="h1"></span></code>
+      <span class="r" style="text-align:left"><span data-n="s2"></span></span><code><span data-n="h2"></span></code>
+    </div>
+    <aside class="notes">Fingeravtrykket er en kryptografisk sjekksum, her de første 32 tegnene av SHA-256. To setninger som bare skiller seg i det siste tegnet, punktum mot komma, får helt forskjellige fingeravtrykk. Derfor kan ingen endre en versjon i ettertid uten at det synes. Sammen med tidsstempelet er dette et dokumentasjonssystem som er mer presist enn noe vi har hatt i forskningen før.</aside>
+  </section>
+</section>
+
+<!-- ===================== 3 IDENTIFIKATORER ===================== -->
+<section>
+  <section class="center-slide">
+    <p class="kicker">Identifikatorer</p>
+    <h2>Fra endring til sitering</h2>
+    <div class="layers" style="width:1700px">
+      <img class="lay" src="images/fig-kjede-0.png" alt="Endring: hvem, når, hva">
+      <img class="lay fragment" src="images/fig-kjede-1.png" alt="Versjon: et navn på en tilstand">
+      <img class="lay fragment" src="images/fig-kjede-2.png" alt="Arkiv: DOI">
+      <img class="lay fragment" src="images/fig-kjede-3.png" alt="Person: ORCID">
+      <img class="lay fragment" src="images/fig-kjede-4.png" alt="Sitering: maskinlesbar">
+    </div>
+    <aside class="notes">Endringene samles i versjoner. (Klikk.) En versjon arkiveres og får en DOI, en varig identifikator som peker på nøyaktig den versjonen. (Klikk.) Forfatterne knyttes til den med ORCID. (Klikk.) Og en liten fil i prosjektet forteller hvordan det skal siteres, i et format maskiner kan lese. (Klikk.) Alt dette er gratis, åpent og i bruk i dag. Vi trenger ikke å finne opp noe nytt for å dokumentere hva som er gjort, av hvem og når.</aside>
+  </section>
+  <section class="center-slide" data-depth="more">
+    <p class="kicker">Et eksempel</p>
+    <h2>Musical Gestures Toolbox</h2>
+    <div class="nums">
+      <div><b><span data-n="mgt_commits"></span></b><span>endringer siden <span data-n="mgt_first"></span></span></div>
+      <div><b><span data-n="mgt_tags"></span></b><span>versjoner</span></div>
+      <div><b>1</b><span>DOI for hver versjon</span></div>
+    </div>
+    <aside class="notes">Et eksempel fra egen forskning: verktøykassen vi bruker til videoanalyse ved RITMO og fourMs-laben. Siste versjon er <span data-n="mgt_version"></span>, utgitt <span data-n="mgt_released"></span>, med DOI <span data-n="mgt_doi"></span>. Hver versjon arkiveres automatisk og får sin egen DOI, så en artikkel kan peke på nøyaktig den koden som ble brukt.</aside>
+  </section>
+  <section class="center-slide" data-depth="deeper">
+    <p class="kicker">Sitering</p>
+    <h2>Slik skal dette siteres</h2>
+    <pre class="code" style="font-size:.6em;max-width:1750px;white-space:pre-wrap;margin:0 auto">cff-version: 1.2.0
+title: "<span data-n="mgt_title"></span>"
+doi: "<span data-n="mgt_doi"></span>"
+version: <span data-n="mgt_version"></span>
+date-released: "<span data-n="mgt_released"></span>"</pre>
+    <aside class="notes">Utdrag av siteringsfilen i repoet, CITATION.cff. Nettsteder og referanseverktøy leser den og lager en riktig referanse, med versjon og DOI.</aside>
+  </section>
+</section>
+
+<!-- ===================== 4 LOGG OG ERKLÆRING ===================== -->
+<section>
+  <section class="center-slide">
+    <p class="kicker">Arbeidslogg</p>
+    <h2>Skriv ned hva som ble gjort, og av hvem</h2>
+    <pre class="code" style="white-space:pre-wrap;font-size:.62em;max-width:1700px;margin:0 auto"><span data-n="worklog"></span></pre>
+    <aside class="notes">Det andre verktøyet er det enkleste av alle: en arbeidslogg i ren tekst i hver prosjektmappe. Dette er den siste oppføringen i mappen for dette innlegget, skrevet da lysbildene ble laget. Loggen sier hva som ble gjort, med hvilke verktøy og hvem som bestemte. Den er versjonert som alt annet, så den kan ikke skrives om i ettertid uten at det synes.</aside>
+  </section>
+  <section class="center-slide" data-depth="more">
+    <p class="kicker">Erklæring</p>
+    <h2>KI er et verktøy, ikke en forfatter</h2>
+    <div class="vs" style="font-size:1em">
+      <span class="l">Mennesker</span><span class="m">får</span><span class="r">roller</span>
+      <span class="l">Verktøy</span><span class="m">får</span><span class="r">en erklæring</span>
+    </div>
+    <aside class="notes">I publikasjoner skiller jeg mellom de to. Menneskene får roller etter CRediT-taksonomien: hvem som hadde idéen, samlet data, skrev, gikk gjennom. Verktøyene og modellene står i en egen KI-erklæring, med navn og versjon. Det er et paradoks her: git kaller agenten medforfatter, mens ingen tidsskrifter godtar en KI som forfatter. Ordet er feil, men praksisen er riktig: det står hvem som gjorde hva.</aside>
+  </section>
+</section>
+
+<!-- ===================== 5 PUBLISERING ===================== -->
+<section>
+  <section class="center-slide">
+    <p class="kicker">Publisering</p>
+    <h2>Åpen publisering, åpen vurdering</h2>
+    <div class="layers" style="width:1600px">
+      <img class="lay" src="images/fig-prc-0.png" alt="Publiser først, gratis">
+      <img class="lay fragment" src="images/fig-prc-1.png" alt="Vurder åpent, med navn">
+      <img class="lay fragment" src="images/fig-prc-2.png" alt="Kurater: samle det beste">
+    </div>
+    <aside class="notes">Den samme åpenheten er på vei inn i publiseringen. Open Research Europe er den europeiske publiseringsplattformen som fra høsten 2026 drives av CERN, med EU-kommisjonen og forskningsråd i flere land bak, også Norges forskningsråd. Det er diamant-åpen tilgang: gratis å lese og gratis å publisere. Modellen kalles publiser, vurder, kurater: artikkelen publiseres først etter en enkel sjekk, (klikk) fagfellevurderingen skjer etterpå og er åpen for alle, (klikk) og så samles det beste. Da blir også vurderingen en del av dokumentasjonen. Kilde: Forskningsrådets nyhet av 26. mars 2026.</aside>
+  </section>
+</section>
+
+<!-- ===================== 6 VURDERING ===================== -->
+<section>
+  <section class="center-slide">
+    <p class="kicker">Vurdering</p>
+    <h2>Vurder hele arbeidet, ikke bare artikkelen</h2>
+    <p class="big" style="font-size:1em">Data, kode, video, prosessen, undervisning, formidling og ledelse teller</p>
+    <aside class="notes">Hvis prosessen er dokumentert, kan vi også vurdere den. Det er tanken bak NOR-CAM, rammeverket for vurdering av akademiske karrierer som Universitets- og høgskolerådet la frem i 2021. Det regner forskningsresultater bredt, med data, kildekode og video, og det har forskningsprosessen som et eget kompetanseområde, ved siden av undervisning, samspill med samfunnet og ledelse. Det passer godt med spørsmålet Astrid stiller i panelet: er artikler og disputas det produktet vi trenger?</aside>
+  </section>
+  <section class="center-slide" data-depth="more">
+    <p class="kicker">Muntlig og helhetlig</p>
+    <h2>La kandidaten forklare arbeidet</h2>
+    <p class="big" style="font-size:1em">Et større arbeid, forsvart muntlig</p>
+    <aside class="notes">Når en KI kan skrive en tekst som ser ferdig ut, blir det muntlige viktigere, ikke mindre viktig. Disputasen er allerede en muntlig prøve. Vi kan styrke den: vurdere et større arbeid, en portefølje med data, kode og tekst, og la kandidaten forklare valgene sine. I kunstnerisk forskning gjør vi dette allerede med eksposisjoner, og i emnet Creative AI er eksamen en portefølje med en logg over hvordan verktøyene ble brukt.</aside>
+  </section>
+  <section data-depth="deeper">
+    <p class="kicker">Mer radikalt</p>
+    <h2>Andre måter å vurdere på</h2>
+    <ul style="font-size:.85em">
+      <li class="fragment">En fortellende CV i stedet for en publikasjonsliste</li>
+      <li class="fragment">Loddtrekning mellom søknader som står likt</li>
+      <li class="fragment">Vurderte forhåndstrykk uten ja eller nei</li>
+      <li class="fragment">Publisering i deler: spørsmål, metode, data, analyse</li>
+      <li class="fragment">Ingen tidsskriftsrangering i vurderingen</li>
+    </ul>
+    <aside class="notes">Til panelet, hvis det passer. Fortellende CV: flere forskningsråd, blant annet i Storbritannia, ber om en beskrivelse av bidragene i stedet for en liste. (Klikk.) Loddtrekning: Det sveitsiske forskningsrådet trekker lodd mellom søknader som komiteen ikke kan skille. (Klikk.) Vurderte forhåndstrykk: tidsskriftet eLife sluttet i 2023 å si ja eller nei, og publiserer i stedet vurderingen sammen med artikkelen. (Klikk.) Publisering i deler: den britiske plattformen Octopus lar forskere publisere hvert ledd for seg, fra problem og hypotese til data og analyse, med egen kreditering. (Klikk.) Ingen tidsskriftsrangering: San Francisco-erklæringen DORA fra 2012 og den europeiske avtalen om reform av forskningsvurdering fra 2022, som UiO har undertegnet, og som koalisjonen CoARA er bygget på.</aside>
+  </section>
+</section>
+
+<!-- ===================== 7 SVART BOKS ===================== -->
+<section>
+  <section class="center-slide">
+    <p class="kicker">Det vi ikke har kontroll på</p>
+    <h2>Det vi ikke kan dokumentere, er modellen</h2>
+    <img class="fig" src="images/fig-svartboks.png" alt="Data, kode, logg og versjon kan dokumenteres; modellen kan ikke det" style="max-height:52vh">
+    <aside class="notes">Alt til venstre kan vi dokumentere. Det vi ikke har kontroll på, er innholdet i modellene, særlig de kommersielle. Vi vet ikke hva de er trent på, og en modell kan ikke peke tilbake til kildene sine. Vi kan skrive at vi brukte en modell og hvilken versjon, men ikke hva som er inne i den.</aside>
+  </section>
+</section>
+
+<!-- ===================== 8 EGNE MODELLER ===================== -->
+<section>
+  <section class="center-slide">
+    <p class="kicker">MishMash</p>
+    <h2>Derfor egne modeller</h2>
+    <p class="big" style="font-size:1em">Små modeller, kjent materiale, åpen kode</p>
+    <aside class="notes">Derfor trenger vi modeller vi har kontroll på: små modeller trent på eget materiale, der vi vet hva som er med, og større norske modeller med innsyn i treningsdata. Det er et hovedfokus i MishMash. Da kan hele kjeden dokumenteres, også modellen.</aside>
+  </section>
+</section>
+
+<!-- ===================== 9 FOR STIPENDIATER ===================== -->
+<section>
+  <section>
+    <p class="kicker">For stipendiater og veiledere</p>
+    <h2>Tre råd</h2>
+    <p class="wish fragment"><b>1</b>Avtal tidlig hva som skal logges</p>
+    <p class="wish fragment"><b>2</b>Bruk verktøyene som finnes: versjonskontroll, DOI, ORCID</p>
+    <p class="wish fragment"><b>3</b>Vurder prosessen og helheten, også muntlig</p>
+    <aside class="notes">Tre råd til slutt. Avtal tidlig i prosjektet hva som skal dokumenteres, og skriv det inn i avhandlingens metodekapittel. (Klikk.) Bruk verktøyene som allerede finnes, de er gratis og de virker. (Klikk.) Og la vurderingen se på prosessen og hele arbeidet, ikke bare den ferdige teksten. Transparens er ikke så vanskelig. Takk.</aside>
+  </section>
+</section>
+
+<!-- ===================== 10 SLIK BLE PRESENTASJONEN LAGET ===================== -->
+<section>
+  <section class="center-slide">
+    <div class="layers" style="width:1600px">
+      <img class="fig" src="images/fig-samskaping-0.svg" alt="Alexander og en KI-agent">
+      <img class="fig fragment" src="images/fig-samskaping-1.svg" alt="Første runde: idé og kilder, første utkast">
+      <img class="fig fragment" src="images/fig-samskaping-2.svg" alt="Andre runde: kommentarer, ny versjon">
+      <img class="fig fragment" src="images/fig-samskaping-4.svg" alt="Lysbildene i midten; ansvaret er mitt">
+    </div>
+    <aside class="notes">I tråd med temaet: slik ble presentasjonen laget. Jeg ga en KI-agent (Claude, Anthropic) idéen og temaene: versjonskontroll, tidsstempler, DOI, Open Research Europe og NOR-CAM. (Klikk.) Den laget et første utkast, hentet tallene med et skript fra git-historikken og tegnet figurene. (Klikk.) Jeg kommenterte, og den laget en ny versjon. (Klikk.) Resultatet er lysbildene, og ansvaret er mitt.</aside>
+  </section>
+  <section class="center-slide" data-depth="more">
+    <p class="kicker">Presentasjonens egen logg</p>
+    <pre class="code" style="font-size:.7em;max-width:1500px;margin:0 auto"><span data-n="gitlog"></span></pre>
+    <aside class="notes">Og presentasjonen har selvsagt sin egen versjonshistorikk. Dette er de siste endringene, hentet automatisk fra git.</aside>
+  </section>
+</section>
+
+</div>
+</div>
+<div id="depth" aria-hidden="true"></div>
+<script src="images/numbers.js"></script>
+<script>
+  // Fill every <span data-n="key"> from images/numbers.js, written by tools/facts.py.
+  document.querySelectorAll('[data-n]').forEach(function (el) {
+    var v = (window.NUMBERS || {})[el.getAttribute('data-n')];
+    el.textContent = (v === undefined) ? '[mangler ' + el.getAttribute('data-n') + ']' : v;
+  });
+</script>
+<script src="lib/reveal/reveal.js"></script>
+<script src="lib/reveal-plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    // 16:9. Reveal scales this to the screen and keeps the aspect ratio.
+    width: 1920, height: 1080, margin: 0.04,
+    minScale: 0.2, maxScale: 2.5,
+    slideNumber: false,
+    navigationMode: 'default',
+    transition: 'fade',
+    controlsTutorial: false,
+    preloadIframes: false,
+    fragments: !/[?&]fragments=false\b/.test(location.search),
+    plugins: [ RevealNotes ]
+  });
+
+  // Light/dark mode
+  function setTheme(dark) {
+    document.documentElement.classList.toggle('dark', dark);
+    try { localStorage.setItem('forskningsetikk-theme', dark ? 'dark' : 'light'); } catch (e) {}
+  }
+  function toggleTheme() { setTheme(!document.documentElement.classList.contains('dark')); }
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+  Reveal.addKeyBinding({ keyCode: 68, key: 'D', description: 'Toggle light/dark mode' }, toggleTheme);
+  // The depth label reads data-depth; a slide without one is basics.
+  function onSlide(ev) {
+    var sl = ev.currentSlide || Reveal.getCurrentSlide();
+    var surface = !!(sl && (sl.hasAttribute('data-background-color') || sl.hasAttribute('data-background-image')));
+    document.body.classList.toggle('on-surface', surface);
+    document.getElementById('depth').textContent = sl ? (sl.getAttribute('data-depth') || 'basics') : '';
+  }
+  Reveal.on('ready', onSlide); Reveal.on('slidechanged', onSlide);
+</script>
+</body>
+</html>

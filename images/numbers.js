@@ -1,0 +1,22 @@
+window.NUMBERS = {
+ "commits": 4718,
+ "commits_ai": 2569,
+ "commits_ai_p": "54 %",
+ "repos": 62,
+ "repos_ai": 40,
+ "mgt_commits": 1384,
+ "mgt_first": "2019",
+ "mgt_tags": 118,
+ "mgt_doi": "10.5281/zenodo.21965729",
+ "mgt_title": "musicalgestures: A Python toolbox for visualising and analysing music-related video recordings",
+ "mgt_version": "1.32.0",
+ "mgt_released": "2026-09-03",
+ "s1": "Jeg skrev denne setningen selv.",
+ "s2": "Jeg skrev denne setningen selv,",
+ "h1": "778ba1dc8c649fa48e3425946b689f9f",
+ "h2": "b1f019b53121b659c2f2db2270204060",
+ "updated": "2026-11-10",
+ "worklog": "## 2026-11-06, PowerPoint til Astrid\n\nLaget `transparens-forskningsetikk-2026-11-12.pptx` med `pptx/build.js` (pptxgenjs), etter mønster fra DNVA-presentasjonen: 21 lysbilder i to seksjoner, innlegget (13) og ekstra til panelet (8), med 19 klikk som animasjoner og talenotatene fra `notes.md`. Tall og kodeblokker leses fra `numbers.js`. Validert med pptx-ferdighetens `validate.py` og sjekket som gjengitte sider. Påminnelse om å sende den til Astrid er satt til 10. november, men gjelder bare denne økten.",
+ "gitlog": "c128b79  2026-11-06  Rollefiguren og kvalitetskontroll, større kodeblokker, og tittelen hentet fra siteringsfilen.\neb30488  2026-11-06  Første utkast: elleve temaer fra egen bruk til hvordan presentasjonen ble laget.",
+ "commit_msg": "commit 0b0df5e\nAuthor: Alexander Refsum Jensenius\nDate:   2026-11-06 07:44\n\n    Ten weeks: images and video merged as chapter 5, code and agents as chapter 8, and every chapter brought up to the Sensing book conventions.\n\n    Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>"
+};
