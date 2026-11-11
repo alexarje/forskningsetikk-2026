@@ -180,6 +180,11 @@
   .reveal .slides section.chapter { top: 0 !important; height: 100%; display: flex !important; flex-direction: column; justify-content: center; }
   .reveal section.chapter h2 { font-size: 3.4em; line-height: 1.1; margin: 0; text-align: left; }
   .reveal section.chapter .chapnum { font-size: 1.6em; font-weight: 700; margin: 0 0 .1em; text-align: left; opacity: .8; }
+  .reveal .slides section.title-photo { top: 0 !important; height: 100%; display: flex !important; flex-direction: column; justify-content: flex-start; padding-top: 3vh; text-align: left; }
+  .reveal section.title-photo h1 { color: #363644; font-size: 1.9em; margin: .1em 0 .1em; text-align: left; }
+  .reveal section.title-photo .big { color: #363644; font-size: .95em; font-weight: 500; text-align: left; margin: 0; }
+  .reveal section.title-photo .kicker { color: #4a5568; text-align: left; }
+  .reveal section.title-photo .byline { color: #363644; font-size: .75em; text-align: left; margin: .6em 0 0; }
 </style>
 </head>
 <body>
@@ -197,21 +202,14 @@
 <div class="slides">
 <!-- ===================== 0 TITTEL ===================== -->
 <section>
-  <section class="center-slide">
+  <section class="title-photo" data-background-image="images/title-stikker.jpg" data-background-size="cover" data-background-position="center 15%" data-background-color="#f2f2f2">
     <p class="kicker">Forum for forskningsetikk · Universitetet i Oslo · 12. november 2026</p>
-    <div class="layers" style="width:1500px">
-      <img class="lay" src="images/fig-kjede-0.png" alt="Endring: hvem, når, hva">
-      <img class="lay" src="images/fig-kjede-1.png" alt="Versjon">
-      <img class="lay" src="images/fig-kjede-2.png" alt="Arkiv med DOI">
-      <img class="lay" src="images/fig-kjede-3.png" alt="Person med ORCID">
-      <img class="lay" src="images/fig-kjede-4.png" alt="Sitering">
-    </div>
-    <h1 style="margin-top:.2em">Transparens er ikke så vanskelig</h1>
-    <p class="big" style="font-size:1.2em">Vi har alt vi trenger for fornuftig bruk av KI</p>
-    <aside class="notes">Budskapet mitt for forskerutdanningen er enkelt: når maskinene kan levere produktet, må vi lære bort og vurdere prosessen. Stipendiaten må kunne vise og forklare veien frem til resultatet, og verktøyene for å dokumentere den har vi allerede. Figuren er kjeden jeg skal gå gjennom: en endring, en versjon, et arkiv, en person og en sitering, alt med varige identifikatorer.</aside>
+    <h1>Transparens er ikke så vanskelig</h1>
+    <p class="big">Vi har alt vi trenger for fornuftig bruk av KI</p>
+    <p class="byline">Alexander Refsum Jensenius</p>
+    <aside class="notes">Budskapet mitt for forskerutdanningen er enkelt: når maskinene kan levere produktet, må vi lære bort og vurdere prosessen. Stipendiaten må kunne vise og forklare veien frem til resultatet, og verktøyene for å dokumentere den har vi allerede. Bildet er fra fjellet en dag med tåke: man finner frem fordi noen har satt opp stikker langs løypen. Det er det dokumentasjon gjør i forskningen.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Hvor jeg snakker fra</p>
     <div class="logos4">
     <div><img class="portrait" src="images/arj-portrait.jpg" alt="Portrett av Alexander Refsum Jensenius"><p>Professor i musikkteknologi, Universitetet i Oslo</p></div>
     <div class="fragment"><img src="images/fourms-logo.png" alt="fourMs-logoen"><p>fourMs-laben, siden 2004</p></div>
