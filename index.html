@@ -188,6 +188,13 @@
   .vroles { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; width: 92%; margin: .5em auto 0; text-align: left; }
   .vroles .card { font-size: .9em; } .vroles .card p { margin: 0; color: var(--muted); }
   .vroles .card.hl { background: #363644; border-color: #363644; color: #fff; } .vroles .card.hl h3 { color: #fff; } .vroles .card.hl p { color: #e2e8f0; }
+  .eco { display: flex; flex-wrap: wrap; gap: .35em; justify-content: center; margin: .3em auto .7em; font-size: .75em; }
+  .eco span { background: #eefbe8; border: 2px solid #8fd67a; border-radius: 999px; padding: .2em .8em; font-weight: 700; }
+  .fair { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5em; width: 94%; margin: 0 auto; text-align: left; }
+  .fair div { border: 2px solid var(--mm-purple); border-radius: 12px; padding: .4em .6em; font-size: .75em; }
+  .fair b { display: block; font-size: 2.4em; line-height: 1; color: #5a4fcf; }
+  .fair h3 { font-size: 1.05em; margin: .2em 0 .1em; } .fair p { margin: 0; color: var(--muted); }
+  html.dark .eco span { background: #1f2e1c; } html.dark .fair b { color: #b8b3ff; }
 </style>
 </head>
 <body>
@@ -333,6 +340,20 @@
       <img class="lay fragment" src="images/fig-provenance-3.png" alt="En tidslinje der hvert steg i et prosjekt er en versjon med tidsstempel, enten fra et menneske med ORCID eller fra en maskin med modell og versjon">
     </div>
     <aside class="notes">Sett sammen blir det slik. Hvert steg i et prosjekt er en versjon med et tidspunkt. (Klikk.) Og hvert bidrag har en avsender: et menneske med ORCID, (klikk) eller en maskin med modell og versjon. I programvareutvikling har man arbeidet slik i mange år. For en stipendiat betyr det at veilederen, og senere komiteen, kan se hvem som gjorde hva og når, uten at noen må huske det i ettertid.</aside>
+  </section>
+  <section class="center-slide">
+    <p class="kicker">Et økosystem</p>
+    <h2>FAIR for forskningsprosessen</h2>
+    <div class="eco">
+      <span>Repo</span><span>Saker</span><span>Gjennomgang</span><span>Automatiske sjekker</span><span>Utgivelser</span><span>Nettsider</span>
+    </div>
+    <div class="fair fragment">
+      <div><b>F</b><h3>Finnbar</h3><p>hver utgivelse får en DOI</p></div>
+      <div><b>A</b><h3>Tilgjengelig</h3><p>åpent, eller bak innlogging</p></div>
+      <div><b>I</b><h3>Interoperabel</h3><p>git, ren tekst, maskinlesbar metadata</p></div>
+      <div><b>R</b><h3>Gjenbrukbar</h3><p>lisens og hele historikken</p></div>
+    </div>
+    <aside class="notes">Verktøyene henger sammen i et økosystem. GitHub er det mest brukte, men GitLab, Codeberg og UiOs egen github.uio.no gjør det samme. Repoet holder alle versjonene. Saker er spørsmål og beslutninger, med navn og dato. Gjennomgang er der noen leser en endring og godkjenner den, slik en veileder gjør. Automatiske sjekker bygger dokumentet og kontrollerer tall og lenker hver gang noe endres. Utgivelser arkiveres i Zenodo og får en DOI, og nettsider gjør resultatet lesbart for andre. Disse lysbildene ligger selv på github.uio.no. (Klikk.) Til sammen er dette FAIR, ikke for dataene, men for prosessen. Finnbar, fordi hver utgivelse har en DOI. Tilgjengelig, åpent eller bak innlogging når materialet ikke kan deles. Interoperabel, fordi git og ren tekst kan leses av alle verktøy, også om tjue år. Og gjenbrukbar, med lisens og hele historikken. For en doktorgrad kan avhandlingen være et repo, og veiledningen kan ligge i sakene og gjennomgangene. Da kan komiteen se veien, ikke bare målet.</aside>
   </section>
   <section class="center-slide" data-depth="more">
     <p class="kicker">Tidsstempel og fingeravtrykk</p>
