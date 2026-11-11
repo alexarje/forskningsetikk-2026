@@ -172,6 +172,14 @@
   .reveal .panel img { width: 100%; height: 50vh; max-height: none; object-fit: cover; border-radius: 10px; }
   .panel figcaption { font-size: .6em; line-height: 1.3; margin-top: .4em; }
   .panel figcaption b { display: block; font-size: 1.25em; margin-bottom: .15em; }
+  .logos4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1em; align-items: center; text-align: center; }
+  .reveal .logos4 img { height: 22vh; width: 100%; object-fit: contain; margin: 0; max-height: none; }
+  .reveal .logos4 img.portrait { object-fit: cover; border-radius: 50%; width: 22vh; height: 22vh; }
+  .logos4 p { font-size: .55em; margin-top: .4em; line-height: 1.25; }
+  html.dark .reveal .logos4 img:not(.portrait) { filter: invert(1) hue-rotate(180deg); }
+  .reveal .slides section.chapter { top: 0 !important; height: 100%; display: flex !important; flex-direction: column; justify-content: center; }
+  .reveal section.chapter h2 { font-size: 3.4em; line-height: 1.1; margin: 0; text-align: left; }
+  .reveal section.chapter .chapnum { font-size: 1.6em; font-weight: 700; margin: 0 0 .1em; text-align: left; opacity: .8; }
 </style>
 </head>
 <body>
@@ -187,7 +195,6 @@
 <button id="theme-toggle" type="button" title="Lys eller mørk (tasten d)" aria-label="Bytt mellom lys og mørk modus">◐</button>
 <div class="reveal">
 <div class="slides">
-
 <!-- ===================== 0 TITTEL ===================== -->
 <section>
   <section class="center-slide">
@@ -201,20 +208,27 @@
     </div>
     <h1 style="margin-top:.2em">Transparens er ikke så vanskelig</h1>
     <p class="big" style="font-size:1.2em">Vi har alt vi trenger for fornuftig bruk av KI</p>
-    <aside class="notes">Jeg er Alexander Refsum Jensenius, professor i musikkteknologi og leder for MishMash, senter for KI og kreativitet. Påstanden min er enkel: det viktigste forskningsetiske grepet med kunstig intelligens er mer åpenhet, og verktøyene for å få det til har vi allerede. Figuren er kjeden jeg skal gå gjennom: en endring, en versjon, et arkiv, en person og en sitering, alt med varige identifikatorer.</aside>
+    <aside class="notes">Budskapet mitt for forskerutdanningen er enkelt: når maskinene kan levere produktet, må vi lære bort og vurdere prosessen. Stipendiaten må kunne vise og forklare veien frem til resultatet, og verktøyene for å dokumentere den har vi allerede. Figuren er kjeden jeg skal gå gjennom: en endring, en versjon, et arkiv, en person og en sitering, alt med varige identifikatorer.</aside>
   </section>
   <section class="center-slide">
-    <p class="kicker">Ti minutter</p>
-    <div class="map" style="grid-template-columns:repeat(3,1fr);font-size:.85em;gap:.5em">
-      <div class="h">Egen bruk</div><div class="mm">Verktøyene finnes</div><div class="h">Publisering</div>
-      <div class="mm">Vurdering</div><div class="h">Svart boks</div><div class="mm">For stipendiater</div>
+    <p class="kicker">Hvor jeg snakker fra</p>
+    <div class="logos4">
+    <div><img class="portrait" src="images/arj-portrait.jpg" alt="Portrett av Alexander Refsum Jensenius"><p>Professor i musikkteknologi, Universitetet i Oslo</p></div>
+    <div class="fragment"><img src="images/fourms-logo.png" alt="fourMs-logoen"><p>fourMs-laben, siden 2004</p></div>
+    <div class="fragment"><img src="images/ritmo-emblem.png" alt="RITMO-emblemet"><p>RITMO, senter for fremragende forskning, 2017–2027</p></div>
+    <div class="fragment"><img src="images/mishmash-wordmark-black.svg" alt="MishMash-ordmerket"><p>MishMash, senter for KI og kreativitet, fra 2025</p></div>
     </div>
-    <aside class="notes">Seks deler: hvordan jeg bruker KI selv, verktøyene som allerede finnes, publisering, vurdering, det vi ikke har kontroll på, og hva dette betyr for stipendiater og veiledere.</aside>
+    <aside class="notes">Jeg er Alexander Refsum Jensenius, professor i musikkteknologi ved Universitetet i Oslo. (Klikk.) fourMs-laben ved Institutt for musikkvitenskap, der vi har tatt opp musikere, dansere og publikum med bevegelsessporing, lyd, video og fysiologiske sensorer siden 2004. (Klikk.) RITMO, senteret for fremragende forskning på rytme, tid og bevegelse, finansiert av Forskningsrådet fra 2017 til 2027. (Klikk.) Og MishMash, det nasjonale senteret for KI og kreativitet, som jeg leder, finansiert fra desember 2025. Eksemplene i dag kommer fra alle tre.</aside>
   </section>
 </section>
 
-<!-- ===================== 1 PROFESSOREN ===================== -->
+<!-- ===================== 1 VEILEDNING ER KVALITETSKONTROLL ===================== -->
 <section>
+  <section class="chapter" data-background-color="#5a4fcf">
+    <p class="chapnum" style="color:#fff">1</p>
+    <h2 style="color:#fff">Veiledning er kvalitetskontroll</h2>
+    <aside class="notes">Først rollen som veileder.</aside>
+  </section>
   <section class="center-slide">
     <div class="layers" style="width:1700px">
       <img class="fig keep" src="images/fig-roller-0.svg" alt="Portrett i midten">
@@ -233,10 +247,6 @@
     <p class="big fragment" style="font-size:1.1em;margin-top:-.4em">Jobben er ofte kvalitetskontroll, nå også av maskiner</p>
     <aside class="notes">Først et perspektiv. Som professor har jeg mange roller: forsker, forfatter, skaper, formidler, leder, veileder, sensor, underviser og flere. I nesten alle jobber jeg gjennom andre: stipendiater, studenter, assistenter, medforfattere og ingeniører, som lager resultater av ulik kvalitet. En stor del av jobben er kvalitetskontroll. (Klikk.) Det endrer seg egentlig ikke med KI. Forskjellen er at vi nå også må forholde oss til maskiner, i tillegg til mennesker. Og kvalitetskontroll krever det samme i begge tilfeller: at vi kan se hva som er gjort, av hvem og når.</aside>
   </section>
-</section>
-
-<!-- ===================== 1 EGEN BRUK ===================== -->
-<section>
   <section class="center-slide">
     <p class="kicker">Egen bruk</p>
     <p class="huge"><span data-n="commits_ai_p"></span></p>
@@ -244,33 +254,40 @@
     <aside class="notes">Jeg bruker KI-verktøy hver dag, i forskning, skriving, programmering og ledelse. Og jeg vet ganske nøyaktig hvor mye, fordi alt jeg lager ligger i versjonskontroll. Av <span data-n="commits"></span> endringer i <span data-n="repos"></span> repoer i år har <span data-n="commits_ai"></span> en linje som sier at en KI-agent var med. Det gjelder <span data-n="repos_ai"></span> av repoene. Tallet er telt av et skript som leser git-historikken, ikke anslått av meg. Det omfatter også endringer andre har gjort i de samme repoene.</aside>
   </section>
   <section class="center-slide" data-depth="more">
+    <p class="kicker">Agenter</p>
+    <h2>Hvem tok valgene underveis?</h2>
+    <div class="layers" style="width:1700px">
+      <img class="lay" src="images/fig-agent-1.png" alt="">
+      <img class="lay fragment" src="images/fig-agent-2.png" alt="Generativ KI: en bestilling gir ett svar. Agentisk KI: et mål gir en sløyfe der maskinen planlegger, bruker verktøy og sjekker, til den leverer et resultat">
+    </div>
+    <aside class="notes">Det siste året har KI-verktøyene endret seg. Generativ KI svarer på en bestilling: du spør, den svarer, og du bestemmer hva som skjer videre. (Klikk.) Agentisk KI får et mål og går mange steg på egen hånd: planlegger, bruker verktøy, sjekker og prøver igjen. Da er spørsmålet ikke bare hvem som skrev teksten, men hvem som tok valgene underveis. For en veileder er det det samme spørsmålet vi alltid har stilt om en stipendiat. Det samme skillet kommer i innledningen til DNVA-møtet om forskningsetikk og KI i kveld.</aside>
+  </section>
+  <section class="center-slide" data-depth="more">
     <p class="kicker">Uke for uke</p>
     <img class="fig" src="images/fig-uker.png" alt="Endringer per uke i 2026, med og uten KI-medforfatter" style="max-height:70vh">
     <aside class="notes">Den samme tellingen uke for uke. Lilla er endringer gjort av mennesker alene, grønn er endringer med en KI-medforfatter. Våren var det meste mitt eget; fra sommeren har agentene gjort en stor del av arbeidet. Den siste uken er ikke ferdig. Poenget er ikke tallet, men at det kan telles.</aside>
   </section>
+  <section class="center-slide" data-depth="more">
+    <p class="kicker">Et eksempel</p>
+    <h2>Agenten rydder, jeg bestemmer</h2>
+    <img src="images/osdb-zenodo.png" alt="Zenodo-posten for Oslo Standstill Database, med samlinger og versjoner" style="max-height:58vh;border-radius:10px">
+    <aside class="notes">Et eksempel fra i sommer, som jeg også viste for UiOs datamanagere i går. Oslo Standstill Database er femten år med bevegelsesdata fra folk som prøver å stå stille. Jeg hadde tenkt å rydde i den i ti år. Med KI-agenter tok det omtrent to måneder: hver samling er nå sin egen post med egen DOI, med siteringsfil og sjekksummer. Agenten gjorde ryddejobben, jeg leste og bestemte. Det er den arbeidsdelingen jeg ønsker for stipendiatene også.</aside>
+  </section>
 </section>
 
-<!-- ===================== 2 VERSJONSKONTROLL ===================== -->
+<!-- ===================== 2 DOKUMENTER PROSESSEN ===================== -->
 <section>
+  <section class="chapter" data-background-color="#C1F7AE">
+    <p class="chapnum" style="color:#363644">2</p>
+    <h2 style="color:#363644">Dokumenter prosessen</h2>
+    <aside class="notes">Så verktøyene. De finnes allerede, og de er gratis.</aside>
+  </section>
   <section class="center-slide">
     <p class="kicker">Versjonskontroll</p>
     <h2>Hver endring har en forfatter, et tidspunkt og en melding</h2>
     <pre class="code" style="white-space:pre-wrap;font-size:.62em;max-width:1700px;margin:0 auto"><span data-n="commit_msg"></span></pre>
     <aside class="notes">Dette er en ekte endring fra i forrige uke, i læreboken til emnet Creative AI. Versjonskontrollsystemet git har vært standard i programvareutvikling i tyve år. Hver endring får en forfatter, et tidspunkt, en melding og et fingeravtrykk. Den siste linjen sier at en KI-agent var medforfatter, og hvilken modell. Det er en konvensjon som de vanlige verktøyene allerede forstår: nettstedet viser medforfatteren ved siden av meg, og kommandolinjeverktøyet gh kan hente det samme ut. Det koster meg ingenting ekstra.</aside>
   </section>
-  <section class="center-slide" data-depth="more">
-    <p class="kicker">Tidsstempel og fingeravtrykk</p>
-    <h2>Endre ett tegn, og fingeravtrykket blir et helt annet</h2>
-    <div class="vs" style="font-size:.8em;grid-template-columns:auto auto">
-      <span class="l" style="text-align:left"><span data-n="s1"></span></span><code><span data-n="h1"></span></code>
-      <span class="r" style="text-align:left"><span data-n="s2"></span></span><code><span data-n="h2"></span></code>
-    </div>
-    <aside class="notes">Fingeravtrykket er en kryptografisk sjekksum, her de første 32 tegnene av SHA-256. To setninger som bare skiller seg i det siste tegnet, punktum mot komma, får helt forskjellige fingeravtrykk. Derfor kan ingen endre en versjon i ettertid uten at det synes. Sammen med tidsstempelet er dette et dokumentasjonssystem som er mer presist enn noe vi har hatt i forskningen før.</aside>
-  </section>
-</section>
-
-<!-- ===================== 3 IDENTIFIKATORER ===================== -->
-<section>
   <section class="center-slide">
     <p class="kicker">Identifikatorer</p>
     <h2>Fra endring til sitering</h2>
@@ -282,6 +299,21 @@
       <img class="lay fragment" src="images/fig-kjede-4.png" alt="Sitering: maskinlesbar">
     </div>
     <aside class="notes">Endringene samles i versjoner. (Klikk.) En versjon arkiveres og får en DOI, en varig identifikator som peker på nøyaktig den versjonen. (Klikk.) Forfatterne knyttes til den med ORCID. (Klikk.) Og en liten fil i prosjektet forteller hvordan det skal siteres, i et format maskiner kan lese. (Klikk.) Alt dette er gratis, åpent og i bruk i dag. Vi trenger ikke å finne opp noe nytt for å dokumentere hva som er gjort, av hvem og når.</aside>
+  </section>
+  <section class="center-slide">
+    <p class="kicker">Arbeidslogg</p>
+    <h2>Skriv ned hva som ble gjort, og av hvem</h2>
+    <pre class="code" style="white-space:pre-wrap;font-size:.62em;max-width:1700px;margin:0 auto"><span data-n="worklog"></span></pre>
+    <aside class="notes">Det andre verktøyet er det enkleste av alle: en arbeidslogg i ren tekst i hver prosjektmappe. Dette er den siste oppføringen i mappen for dette innlegget, skrevet da lysbildene ble laget. Loggen sier hva som ble gjort, med hvilke verktøy og hvem som bestemte. Den er versjonert som alt annet, så den kan ikke skrives om i ettertid uten at det synes.</aside>
+  </section>
+  <section class="center-slide" data-depth="more">
+    <p class="kicker">Tidsstempel og fingeravtrykk</p>
+    <h2>Endre ett tegn, og fingeravtrykket blir et helt annet</h2>
+    <div class="vs" style="font-size:.8em;grid-template-columns:auto auto">
+      <span class="l" style="text-align:left"><span data-n="s1"></span></span><code><span data-n="h1"></span></code>
+      <span class="r" style="text-align:left"><span data-n="s2"></span></span><code><span data-n="h2"></span></code>
+    </div>
+    <aside class="notes">Fingeravtrykket er en kryptografisk sjekksum, her de første 32 tegnene av SHA-256. To setninger som bare skiller seg i det siste tegnet, punktum mot komma, får helt forskjellige fingeravtrykk. Derfor kan ingen endre en versjon i ettertid uten at det synes. Sammen med tidsstempelet er dette et dokumentasjonssystem som er mer presist enn noe vi har hatt i forskningen før.</aside>
   </section>
   <section class="center-slide" data-depth="more">
     <p class="kicker">Et eksempel</p>
@@ -303,16 +335,6 @@ version: <span data-n="mgt_version"></span>
 date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Utdrag av siteringsfilen i repoet, CITATION.cff. Nettsteder og referanseverktøy leser den og lager en riktig referanse, med versjon og DOI.</aside>
   </section>
-</section>
-
-<!-- ===================== 4 LOGG OG ERKLÆRING ===================== -->
-<section>
-  <section class="center-slide">
-    <p class="kicker">Arbeidslogg</p>
-    <h2>Skriv ned hva som ble gjort, og av hvem</h2>
-    <pre class="code" style="white-space:pre-wrap;font-size:.62em;max-width:1700px;margin:0 auto"><span data-n="worklog"></span></pre>
-    <aside class="notes">Det andre verktøyet er det enkleste av alle: en arbeidslogg i ren tekst i hver prosjektmappe. Dette er den siste oppføringen i mappen for dette innlegget, skrevet da lysbildene ble laget. Loggen sier hva som ble gjort, med hvilke verktøy og hvem som bestemte. Den er versjonert som alt annet, så den kan ikke skrives om i ettertid uten at det synes.</aside>
-  </section>
   <section class="center-slide" data-depth="more">
     <p class="kicker">Erklæring</p>
     <h2>KI er et verktøy, ikke en forfatter</h2>
@@ -324,9 +346,36 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
   </section>
 </section>
 
-<!-- ===================== 5 PUBLISERING ===================== -->
+<!-- ===================== 3 VURDER PROSESSEN ===================== -->
 <section>
+  <section class="chapter" data-background-color="#A7A1F4">
+    <p class="chapnum" style="color:#363644">3</p>
+    <h2 style="color:#363644">Vurder prosessen</h2>
+    <aside class="notes">Når prosessen er dokumentert, kan vi også vurdere den.</aside>
+  </section>
   <section class="center-slide">
+    <p class="kicker">Forskerutdanning</p>
+    <h2>Hva skal til for å bli forsker i dag?</h2>
+    <div class="layers" style="width:1600px">
+      <img class="lay" src="images/fig-career-1.png" alt="">
+      <img class="lay fragment" src="images/fig-career-2.png" alt="">
+      <img class="lay fragment" src="images/fig-career-3.png" alt="Kurver over når man kan gi et selvstendig bidrag, fra bachelor til forsker: før i doktorgraden, med KI allerede på bachelornivå i noen fag, og i andre fag ikke engang som postdoktor">
+    </div>
+    <aside class="notes">Tradisjonelt lærer man å forske gjennom hele løpet, og det første selvstendige bidraget kommer gjerne i doktorgraden. (Klikk.) Med KI kan en bachelorstudent i noen fag gjennomføre et ordentlig forskningsprosjekt: samle inn data, analysere og skrive. (Klikk.) I andre fag kan selv en postdoktor slite med å gi et bidrag som maskinene ikke allerede kan gi. Kurvene er en illustrasjon, ikke en måling. Hvis produktet ikke lenger skiller den som kan forske fra den som ikke kan, må vurderingen se på noe annet: prosessen, og om kandidaten kan forklare den.</aside>
+  </section>
+  <section class="center-slide">
+    <p class="kicker">Vurdering</p>
+    <h2>Vurder hele arbeidet, ikke bare artikkelen</h2>
+    <p class="big" style="font-size:1em">Data, kode, video, prosessen, undervisning, formidling og ledelse teller</p>
+    <aside class="notes">Hvis prosessen er dokumentert, kan vi også vurdere den. Det er tanken bak NOR-CAM, rammeverket for vurdering av akademiske karrierer som Universitets- og høgskolerådet la frem i 2021. Det regner forskningsresultater bredt, med data, kildekode og video, og det har forskningsprosessen som et eget kompetanseområde, ved siden av undervisning, samspill med samfunnet og ledelse. Det passer godt med spørsmålet Astrid stiller i panelet: er artikler og disputas det produktet vi trenger?</aside>
+  </section>
+  <section class="center-slide">
+    <p class="kicker">Muntlig og helhetlig</p>
+    <h2>La kandidaten forklare arbeidet</h2>
+    <p class="big" style="font-size:1em">Et større arbeid, forsvart muntlig</p>
+    <aside class="notes">Når en KI kan skrive en tekst som ser ferdig ut, blir det muntlige viktigere, ikke mindre viktig. Disputasen er allerede en muntlig prøve. Vi kan styrke den: vurdere et større arbeid, en portefølje med data, kode og tekst, og la kandidaten forklare valgene sine. I kunstnerisk forskning gjør vi dette allerede med eksposisjoner, og i emnet Creative AI er eksamen en portefølje med en logg over hvordan verktøyene ble brukt.</aside>
+  </section>
+  <section class="center-slide" data-depth="more">
     <p class="kicker">Publisering</p>
     <h2>Åpen publisering, åpen vurdering</h2>
     <div class="layers" style="width:1600px">
@@ -335,22 +384,6 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
       <img class="lay fragment" src="images/fig-prc-2.png" alt="Kurater: samle det beste">
     </div>
     <aside class="notes">Den samme åpenheten er på vei inn i publiseringen. Open Research Europe er den europeiske publiseringsplattformen som fra høsten 2026 drives av CERN, med EU-kommisjonen og forskningsråd i flere land bak, også Norges forskningsråd. Det er diamant-åpen tilgang: gratis å lese og gratis å publisere. Modellen kalles publiser, vurder, kurater: artikkelen publiseres først etter en enkel sjekk, (klikk) fagfellevurderingen skjer etterpå og er åpen for alle, (klikk) og så samles det beste. Da blir også vurderingen en del av dokumentasjonen. Kilde: Forskningsrådets nyhet av 26. mars 2026.</aside>
-  </section>
-</section>
-
-<!-- ===================== 6 VURDERING ===================== -->
-<section>
-  <section class="center-slide">
-    <p class="kicker">Vurdering</p>
-    <h2>Vurder hele arbeidet, ikke bare artikkelen</h2>
-    <p class="big" style="font-size:1em">Data, kode, video, prosessen, undervisning, formidling og ledelse teller</p>
-    <aside class="notes">Hvis prosessen er dokumentert, kan vi også vurdere den. Det er tanken bak NOR-CAM, rammeverket for vurdering av akademiske karrierer som Universitets- og høgskolerådet la frem i 2021. Det regner forskningsresultater bredt, med data, kildekode og video, og det har forskningsprosessen som et eget kompetanseområde, ved siden av undervisning, samspill med samfunnet og ledelse. Det passer godt med spørsmålet Astrid stiller i panelet: er artikler og disputas det produktet vi trenger?</aside>
-  </section>
-  <section class="center-slide" data-depth="more">
-    <p class="kicker">Muntlig og helhetlig</p>
-    <h2>La kandidaten forklare arbeidet</h2>
-    <p class="big" style="font-size:1em">Et større arbeid, forsvart muntlig</p>
-    <aside class="notes">Når en KI kan skrive en tekst som ser ferdig ut, blir det muntlige viktigere, ikke mindre viktig. Disputasen er allerede en muntlig prøve. Vi kan styrke den: vurdere et større arbeid, en portefølje med data, kode og tekst, og la kandidaten forklare valgene sine. I kunstnerisk forskning gjør vi dette allerede med eksposisjoner, og i emnet Creative AI er eksamen en portefølje med en logg over hvordan verktøyene ble brukt.</aside>
   </section>
   <section data-depth="deeper">
     <p class="kicker">Mer radikalt</p>
@@ -366,18 +399,19 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
   </section>
 </section>
 
-<!-- ===================== 7 SVART BOKS ===================== -->
+<!-- ===================== 4 KJENN MODELLEN ===================== -->
 <section>
+  <section class="chapter" data-background-color="#363644">
+    <p class="chapnum" style="color:#fff">4</p>
+    <h2 style="color:#fff">Kjenn modellen</h2>
+    <aside class="notes">Til slutt det vi ikke har kontroll på.</aside>
+  </section>
   <section class="center-slide">
     <p class="kicker">Det vi ikke har kontroll på</p>
     <h2>Det vi ikke kan dokumentere, er modellen</h2>
     <img class="fig" src="images/fig-svartboks.png" alt="Data, kode, logg og versjon kan dokumenteres; modellen kan ikke det" style="max-height:52vh">
     <aside class="notes">Alt til venstre kan vi dokumentere. Det vi ikke har kontroll på, er innholdet i modellene, særlig de kommersielle. Vi vet ikke hva de er trent på, og en modell kan ikke peke tilbake til kildene sine. Vi kan skrive at vi brukte en modell og hvilken versjon, men ikke hva som er inne i den.</aside>
   </section>
-</section>
-
-<!-- ===================== 8 EGNE MODELLER ===================== -->
-<section>
   <section class="center-slide">
     <p class="kicker">MishMash</p>
     <h2>Derfor egne modeller</h2>
@@ -386,19 +420,22 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
   </section>
 </section>
 
-<!-- ===================== 9 FOR STIPENDIATER ===================== -->
+<!-- ===================== 5 FOR STIPENDIATER OG VEILEDERE ===================== -->
 <section>
+  <section class="chapter" data-background-color="#5a4fcf">
+    <h2 style="color:#fff">For stipendiater og veiledere</h2>
+    <aside class="notes">Hva betyr dette i praksis?</aside>
+  </section>
   <section>
-    <p class="kicker">For stipendiater og veiledere</p>
     <h2>Tre råd</h2>
     <p class="wish fragment"><b>1</b>Avtal tidlig hva som skal logges</p>
-    <p class="wish fragment"><b>2</b>Bruk verktøyene som finnes: versjonskontroll, DOI, ORCID</p>
+    <p class="wish fragment"><b>2</b>Bruk verktøyene som finnes, og la agentene rydde</p>
     <p class="wish fragment"><b>3</b>Vurder prosessen og helheten, også muntlig</p>
-    <aside class="notes">Tre råd til slutt. Avtal tidlig i prosjektet hva som skal dokumenteres, og skriv det inn i avhandlingens metodekapittel. (Klikk.) Bruk verktøyene som allerede finnes, de er gratis og de virker. (Klikk.) Og la vurderingen se på prosessen og hele arbeidet, ikke bare den ferdige teksten. Transparens er ikke så vanskelig. Takk.</aside>
+    <aside class="notes">Tre råd. Avtal tidlig i prosjektet hva som skal dokumenteres, og skriv det inn i avhandlingens metodekapittel. Å beskrive hvordan dataene ble til, det vi kaller paradata, er noe forskere faktisk liker å gjøre, i motsetning til å fylle ut skjemaer. (Klikk.) Bruk verktøyene som allerede finnes, de er gratis og de virker, og la gjerne agentene gjøre ryddejobben, så lenge det er kandidaten som bestemmer. (Klikk.) Og la vurderingen se på prosessen og hele arbeidet, også muntlig, ikke bare den ferdige teksten. Transparens er ikke så vanskelig. Takk.</aside>
   </section>
 </section>
 
-<!-- ===================== 10 SLIK BLE PRESENTASJONEN LAGET ===================== -->
+<!-- ===================== 6 SLIK BLE PRESENTASJONEN LAGET ===================== -->
 <section>
   <section class="center-slide">
     <div class="layers" style="width:1600px">
@@ -415,7 +452,6 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Og presentasjonen har selvsagt sin egen versjonshistorikk. Dette er de siste endringene, hentet automatisk fra git.</aside>
   </section>
 </section>
-
 </div>
 </div>
 <div id="depth" aria-hidden="true"></div>

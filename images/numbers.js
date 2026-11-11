@@ -1,9 +1,9 @@
 window.NUMBERS = {
- "commits": 4718,
- "commits_ai": 2569,
- "commits_ai_p": "54 %",
- "repos": 62,
- "repos_ai": 40,
+ "commits": 4742,
+ "commits_ai": 2592,
+ "commits_ai_p": "55 %",
+ "repos": 64,
+ "repos_ai": 42,
  "mgt_commits": 1384,
  "mgt_first": "2019",
  "mgt_tags": 118,
@@ -15,8 +15,8 @@ window.NUMBERS = {
  "s2": "Jeg skrev denne setningen selv,",
  "h1": "778ba1dc8c649fa48e3425946b689f9f",
  "h2": "b1f019b53121b659c2f2db2270204060",
- "updated": "2026-11-10",
- "worklog": "## 2026-11-06, PowerPoint til Astrid\n\nLaget `transparens-forskningsetikk-2026-11-12.pptx` med `pptx/build.js` (pptxgenjs), etter mønster fra DNVA-presentasjonen: 21 lysbilder i to seksjoner, innlegget (13) og ekstra til panelet (8), med 19 klikk som animasjoner og talenotatene fra `notes.md`. Tall og kodeblokker leses fra `numbers.js`. Validert med pptx-ferdighetens `validate.py` og sjekket som gjengitte sider. Påminnelse om å sende den til Astrid er satt til 10. november, men gjelder bare denne økten.",
- "gitlog": "c128b79  2026-11-06  Rollefiguren og kvalitetskontroll, større kodeblokker, og tittelen hentet fra siteringsfilen.\neb30488  2026-11-06  Første utkast: elleve temaer fra egen bruk til hvordan presentasjonen ble laget.",
+ "updated": "2026-11-11",
+ "worklog": "## 2026-11-11, ny struktur\n\nInnlegget er bygget om rundt forskerutdanningen, etter Alexanders bestilling: når maskinene kan levere produktet, må vi lære bort og vurdere prosessen. Fire kapitler med farget bakgrunn (veiledning er kvalitetskontroll, dokumenter prosessen, vurder prosessen, kjenn modellen) og tre råd til slutt. Fra DNVA-innledningen 12. november: generativ eller agentisk KI og kurvene for når man kan gi et selvstendig bidrag. Fra foredraget for datamanagerne 11. november: agenten rydder datasettet, mennesket bestemmer, og paradata i stedet for skjemaer. Lysbildet \"Ti minutter\" er fjernet, og \"Hvor jeg snakker fra\" er nytt etter tittelen.",
+ "gitlog": "8da6886  2026-11-11  README for Pages-kopien\ne80d466  2026-11-11  Valgfri setning fra DMN-salen i notatene til 9/0; make_site.py for Pages\n540db28  2026-11-10  Klammene løst: UiO har undertegnet avtalen (CoARA), to runder i samskapingsfiguren; tallene oppdatert\nc128b79  2026-11-06  Rollefiguren og kvalitetskontroll, større kodeblokker, og tittelen hentet fra siteringsfilen.\neb30488  2026-11-06  Første utkast: elleve temaer fra egen bruk til hvordan presentasjonen ble laget.",
  "commit_msg": "commit 0b0df5e\nAuthor: Alexander Refsum Jensenius\nDate:   2026-11-06 07:44\n\n    Ten weeks: images and video merged as chapter 5, code and agents as chapter 8, and every chapter brought up to the Sensing book conventions.\n\n    Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>"
 };
