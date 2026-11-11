@@ -323,7 +323,7 @@
     <aside class="notes">Endringene samles i versjoner. (Klikk.) En versjon arkiveres og får en DOI, en varig identifikator som peker på nøyaktig den versjonen. (Klikk.) Forfatterne knyttes til den med ORCID. (Klikk.) Og en liten fil i prosjektet forteller hvordan det skal siteres, i et format maskiner kan lese. (Klikk.) Alt dette er gratis, åpent og i bruk i dag. Vi trenger ikke å finne opp noe nytt for å dokumentere hva som er gjort, av hvem og når.</aside>
   </section>
   <section class="center-slide">
-    <pre class="code" style="white-space:pre-wrap;font-size:.62em;max-width:1700px;margin:0 auto"><span data-n="worklog"></span></pre>
+    <pre class="code" style="white-space:pre-wrap;font-size:.48em;max-width:1600px;margin:0 auto"><span data-n="worklog"></span></pre>
     <aside class="notes">Et annet verktøy er det enkleste av alle: en arbeidslogg i ren tekst i hver prosjektmappe. Dette er den siste oppføringen i mappen for dette innlegget, skrevet da lysbildene ble laget. Loggen sier hva som ble gjort, med hvilke verktøy og hvem som bestemte. Den er versjonert som alt annet, så den kan ikke skrives om i ettertid uten at det synes.</aside>
   </section>
   <section class="center-slide">
@@ -349,7 +349,7 @@
       <span class="l" style="text-align:left"><span data-n="s1"></span></span><code><span data-n="h1"></span></code>
       <span class="r" style="text-align:left"><span data-n="s2"></span></span><code><span data-n="h2"></span></code>
     </div>
-    <div class="pop fragment"><img class="ico" src="images/ico/search.svg" alt=""><b>Hva er dette?</b> Et fingeravtrykk (SHA-256): en kode som regnes ut fra innholdet. Samme tekst gir alltid samme kode, men endres ett tegn, blir koden en helt annen. Koden kan ikke regnes tilbake til teksten.</div>
+    <div class="pop fragment"><img class="ico" src="images/ico/search.svg" alt=""><b>Fingeravtrykk:</b> en kode regnet ut fra teksten. Endres ett tegn, endres hele koden.</div>
     <aside class="notes">Fingeravtrykket er en kryptografisk sjekksum, her de første 32 tegnene av SHA-256. (Klikk.) Det er en kode som regnes ut fra innholdet: samme tekst gir alltid samme kode, og koden kan ikke regnes tilbake til teksten. To setninger som bare skiller seg i det siste tegnet, punktum mot komma, får helt forskjellige fingeravtrykk. Derfor kan ingen endre en versjon i ettertid uten at det synes. Sammen med tidsstempelet er dette et dokumentasjonssystem som er mer presist enn noe vi har hatt i forskningen før.</aside>
   </section>
   <section class="center-slide" data-depth="more">
@@ -397,17 +397,11 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">Tradisjonelt lærer man å forske gjennom hele løpet, og det første selvstendige bidraget kommer gjerne i doktorgraden. (Klikk.) Med KI kan en bachelorstudent i noen fag gjennomføre et ordentlig forskningsprosjekt: samle inn data, analysere og skrive. (Klikk.) I andre fag kan selv en postdoktor slite med å gi et bidrag som maskinene ikke allerede kan gi. Kurvene er en illustrasjon, ikke en måling. Hvis produktet ikke lenger skiller den som kan forske fra den som ikke kan, må vurderingen se på noe annet: prosessen, og om kandidaten kan forklare den.</aside>
   </section>
   <section class="center-slide">
-    <h2>Vurder hele arbeidet, ikke bare artikkelen</h2>
     <div class="norcam">
       <img src="images/nor-cam-rapport.png" alt="Forsiden av NOR-CAM-rapporten fra Universitets- og høgskolerådet, 2021">
       <p class="big">NOR-CAM, 2021: data, kode, video, prosessen, undervisning, formidling og ledelse teller</p>
     </div>
     <aside class="notes">Hvis prosessen er dokumentert, kan vi også vurdere den. Det er tanken bak NOR-CAM, rapporten og rammeverket for vurdering av akademiske karrierer som Universitets- og høgskolerådet la frem i 2021. Det regner forskningsresultater bredt, med data, kildekode og video, og det har forskningsprosessen som et eget kompetanseområde, ved siden av undervisning, samspill med samfunnet og ledelse. Det passer godt med spørsmålet Astrid stiller i panelet: er artikler og disputas det produktet vi trenger?</aside>
-  </section>
-  <section class="center-slide">
-    <h2>La kandidaten forklare arbeidet</h2>
-    <p class="big" style="font-size:1em">Et større arbeid, forsvart muntlig</p>
-    <aside class="notes">Når en KI kan skrive en tekst som ser ferdig ut, blir det muntlige viktigere, ikke mindre viktig. Disputasen er allerede en muntlig prøve. Vi kan styrke den: vurdere et større arbeid, en portefølje med data, kode og tekst, og la kandidaten forklare valgene sine. I kunstnerisk forskning gjør vi dette allerede med eksposisjoner, og i emnet Creative AI er eksamen en portefølje med en logg over hvordan verktøyene ble brukt.</aside>
   </section>
   <section class="center-slide" data-depth="more">
     <h2>Åpen publisering, åpen vurdering</h2>
@@ -465,6 +459,12 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <p class="big fragment" style="font-size:.9em;margin-top:.6em">Men infrastrukturen har hull: lukkede data, lagring og regnekraft</p>
     <aside class="notes">Derfor trenger vi modeller vi har kontroll på: små modeller trent på eget materiale, der vi vet hva som er med, og større norske modeller med innsyn i treningsdata. Det er et hovedfokus i MishMash. Da kan hele kjeden dokumenteres, også modellen. (Klikk.) Men infrastrukturen har fortsatt hull: vi har mye på plass, men ingen nasjonal løsning for lukkede data, og lagring og regnekraft ligger på ulike steder.</aside>
   </section>
+  <section data-depth="more" data-background-image="images/map-storage.svg" data-background-size="contain" data-background-color="#ffffff">
+    <aside class="notes">Hullene i lagringen, kartet fra foredraget for datamanagerne i går. Trinnene går bortover, fra opptak til å telle i Europa, og nivåene oppover, fra laben til Europa. Grønt fungerer i dag, hvitt har en port eller et hull, rødt er et steg ingen gjør. Lagring finnes på alle nivåer: USIT, NIRD Data Lake ved siden av den nasjonale superdatamaskinen, og Zenodo. Det ingen gjør, er å kuratere og formidle lyd, video, bevegelse og bilder, holde samtykkede mediedata med ulike rettighetsnivåer, eller ta imot data fra en kunstner uten institusjon. Hullet er et mediearkiv.</aside>
+  </section>
+  <section data-depth="more" data-background-image="images/map-compute.svg" data-background-size="contain" data-background-color="#ffffff">
+    <aside class="notes">Og regnekraften i det samme landskapet. Radene er veiene inn, fra egen maskin nederst via institusjonen og nasjonale tildelinger til Europa øverst. Kolonnene er brukerne, fra en forsker ved et stort universitet til en frilanskunstner. To hull: uten en arbeidsgiver kommer man ikke inn, og ingen norsk tjeneste kjører modeller for bilde, lyd, musikk eller video. Og dataene må flyttes dit regnekraften er, med lisensen sin.</aside>
+  </section>
 </section>
 
 <!-- ===================== 5 FOR STIPENDIATER OG VEILEDERE ===================== -->
@@ -512,7 +512,7 @@ date-released: "<span data-n="mgt_released"></span>"</pre>
     <aside class="notes">I tråd med temaet: slik ble presentasjonen laget. Jeg ga en KI-agent (Claude, Anthropic) idéen og temaene: versjonskontroll, tidsstempler, DOI, Open Research Europe og NOR-CAM. (Klikk.) Den laget et første utkast, hentet tallene med et skript fra git-historikken og tegnet figurene. (Klikk.) Jeg kommenterte, og den laget en ny versjon. (Klikk.) Og så flere kommentarer og flere versjoner: lysbildene har nå <span data-n="deck_commits"></span> lagrede versjoner i git, de fleste fra kvelden før. (Klikk.) Resultatet er lysbildene, og ansvaret er mitt.</aside>
   </section>
   <section class="center-slide" data-depth="more">
-    <pre class="code" style="font-size:.7em;max-width:1500px;margin:0 auto"><span data-n="gitlog"></span></pre>
+    <pre class="code" style="font-size:.5em;max-width:1600px;margin:0 auto"><span data-n="gitlog"></span></pre>
     <aside class="notes">Og presentasjonen har selvsagt sin egen versjonshistorikk. Dette er de siste endringene, hentet automatisk fra git.</aside>
   </section>
 </section>
